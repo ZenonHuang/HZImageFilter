@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2505A24E1EB617C200BCC6AD /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2505A24D1EB617C200BCC6AD /* dataList.plist */; };
+		2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */; };
 		256FFDA21EB4CECA0087FCE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 256FFDA11EB4CECA0087FCE6 /* main.m */; };
 		256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256FFDA41EB4CECA0087FCE6 /* AppDelegate.m */; };
 		256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256FFDA71EB4CECA0087FCE6 /* ViewController.m */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2505A24D1EB617C200BCC6AD /* dataList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
+		2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCoreImageViewController.m; sourceTree = "<group>"; };
+		2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCoreImageViewController.h; sourceTree = "<group>"; };
 		256FFD9D1EB4CECA0087FCE6 /* HZImageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZImageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		256FFDA11EB4CECA0087FCE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		256FFDA31EB4CECA0087FCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +44,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2505A24F1EB61CAB00BCC6AD /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
+				2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		2505A2501EB61CBA00BCC6AD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */,
+				256FFDB11EB4CECA0087FCE6 /* Info.plist */,
+				2505A24D1EB617C200BCC6AD /* dataList.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		256FFD941EB4CECA0087FCE6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +82,14 @@
 		256FFD9F1EB4CECA0087FCE6 /* HZImageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				2505A2501EB61CBA00BCC6AD /* Resource */,
+				2505A24F1EB61CAB00BCC6AD /* Demo */,
 				256FFDA31EB4CECA0087FCE6 /* AppDelegate.h */,
 				256FFDA41EB4CECA0087FCE6 /* AppDelegate.m */,
 				256FFDA61EB4CECA0087FCE6 /* ViewController.h */,
 				256FFDA71EB4CECA0087FCE6 /* ViewController.m */,
 				256FFDA91EB4CECA0087FCE6 /* Main.storyboard */,
-				256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */,
 				256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */,
-				256FFDB11EB4CECA0087FCE6 /* Info.plist */,
 				256FFDA01EB4CECA0087FCE6 /* Supporting Files */,
 			);
 			path = HZImageFilter;
@@ -110,6 +134,7 @@
 				TargetAttributes = {
 					256FFD9C1EB4CECA0087FCE6 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4GK5VN4446;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +164,7 @@
 			files = (
 				256FFDB01EB4CECA0087FCE6 /* LaunchScreen.storyboard in Resources */,
 				256FFDAD1EB4CECA0087FCE6 /* Assets.xcassets in Resources */,
+				2505A24E1EB617C200BCC6AD /* dataList.plist in Resources */,
 				256FFDAB1EB4CECA0087FCE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +179,7 @@
 				256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */,
 				256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */,
 				256FFDA21EB4CECA0087FCE6 /* main.m in Sources */,
+				2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4GK5VN4446;
 				INFOPLIST_FILE = HZImageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzgo.HZImageFilter;
@@ -283,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4GK5VN4446;
 				INFOPLIST_FILE = HZImageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzgo.HZImageFilter;
@@ -309,6 +338,7 @@
 				256FFDB61EB4CECA0087FCE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
