@@ -36,6 +36,7 @@
 		25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCustomFilterViewController.m; sourceTree = "<group>"; };
 		25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCustomFilterViewController.h; sourceTree = "<group>"; };
 		25E020001EB822B30037CD2D /* ChromaKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromaKey.m; sourceTree = "<group>"; };
+		25E020021EB837DD0037CD2D /* ChromaKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChromaKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 				25E020001EB822B30037CD2D /* ChromaKey.m */,
 				25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */,
 				25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */,
+				25E020021EB837DD0037CD2D /* ChromaKey.h */,
 			);
 			name = CustomCoreImage;
 			sourceTree = "<group>";
