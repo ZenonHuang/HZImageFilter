@@ -69,7 +69,8 @@
         CIImage *ciImage = [[CIImage alloc] initWithImage:self.originImage];
         
         //创建滤镜
-        CIFilter *filter = [CIFilter filterWithName:filterName keysAndValues:kCIInputImageKey, ciImage, nil];
+        CIFilter *filter = [CIFilter filterWithName:filterName 
+                                      keysAndValues:kCIInputImageKey,ciImage, nil];
         
         //已有的值不改变，其他的设为默认值
         [filter setDefaults];
@@ -114,7 +115,7 @@
 #pragma mark - getter
 -(UIImage *)originImage{
     if (!_originImage) {
-        _originImage = [UIImage imageNamed:@"ttttt"];
+        _originImage = [UIImage imageNamed:@"test"];
     }
     return _originImage;
 }

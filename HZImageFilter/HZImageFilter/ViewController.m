@@ -70,6 +70,22 @@ static NSString *DataCellIdentifier      = @"DataCellTableIdentifier";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];// 取消选中
     NSDictionary *dic = self.totalArray[indexPath.row];
     
+    NSString *sbID=dic[@"StoryBoardID"];
+    if (sbID) {
+        if (sbID.length>0) {
+            
+            //获取storyboard: 通过bundle根据storyboard的名字来获取我们的storyboard,
+            UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            //由storyboard根据myView的storyBoardID来获取我们要切换的视图
+            UIViewController *vc = [story instantiateViewControllerWithIdentifier:sbID];
+            
+            [self.navigationController pushViewController:vc animated:YES];
+            return;
+        }
+    }
+    
+    
+    
     //得到target名，如Target_TabBar。
     NSString *targetClassString = dic[@"vc"];
     //得到方法名，Action_%@: , 如Action_nativeTabBarController

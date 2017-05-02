@@ -10,5 +10,13 @@
 		<key>title</key>
 		<string>CoreImageFilter</string>
 	</dict>
+	<dict>
+		<key>StoryBoardID</key>
+		<string>CustomFilterVC</string>
+		<key>vc</key>
+		<string>HZCustomFilterViewController</string>
+		<key>title</key>
+		<string>CustomFilter</string>
+	</dict>
 </array>
 </plist>

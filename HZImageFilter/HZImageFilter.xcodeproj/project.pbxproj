@@ -15,6 +15,8 @@
 		256FFDAB1EB4CECA0087FCE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDA91EB4CECA0087FCE6 /* Main.storyboard */; };
 		256FFDAD1EB4CECA0087FCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */; };
 		256FFDB01EB4CECA0087FCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */; };
+		25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */; };
+		25E020011EB822B30037CD2D /* ChromaKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E020001EB822B30037CD2D /* ChromaKey.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		256FFDAF1EB4CECA0087FCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		256FFDB11EB4CECA0087FCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCustomFilterViewController.m; sourceTree = "<group>"; };
+		25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCustomFilterViewController.h; sourceTree = "<group>"; };
+		25E020001EB822B30037CD2D /* ChromaKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromaKey.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +52,8 @@
 		2505A24F1EB61CAB00BCC6AD /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
-				2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */,
+				25E01FFF1EB822940037CD2D /* CustomCoreImage */,
+				25E01FFE1EB822830037CD2D /* CoreImage */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -101,6 +106,25 @@
 				256FFDA11EB4CECA0087FCE6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25E01FFE1EB822830037CD2D /* CoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
+				2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */,
+			);
+			name = CoreImage;
+			sourceTree = "<group>";
+		};
+		25E01FFF1EB822940037CD2D /* CustomCoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				25E020001EB822B30037CD2D /* ChromaKey.m */,
+				25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */,
+				25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */,
+			);
+			name = CustomCoreImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */,
+				25E020011EB822B30037CD2D /* ChromaKey.m in Sources */,
 				256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */,
+				25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */,
 				256FFDA21EB4CECA0087FCE6 /* main.m in Sources */,
 				2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */,
 			);

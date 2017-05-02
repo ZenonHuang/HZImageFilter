@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,6 +29,86 @@
             </objects>
             <point key="canvasLocation" x="1065" y="12"/>
         </scene>
+        <!--Custom Filter View Controller-->
+        <scene sceneID="GZn-ci-iZu">
+            <objects>
+                <viewController storyboardIdentifier="CustomFilterVC" id="3bU-DJ-BpD" customClass="HZCustomFilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bDz-ZO-R1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="AZZ-Mg-hJw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8eg-Hx-kmq" customClass="HZC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenBg" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Mr-kxc">
+                                <rect key="frame" x="56" y="100" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Dd3-iA-FwI"/>
+                                    <constraint firstAttribute="width" constant="100" id="XAn-6e-7Wv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resultBg" translatesAutoresizingMaskIntoConstraints="NO" id="fPQ-Zx-ITd">
+                                <rect key="frame" x="219" y="100" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6Ut-8X-nwd"/>
+                                    <constraint firstAttribute="height" constant="100" id="det-SG-dvy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-oA-l45">
+                                <rect key="frame" x="56" y="250" width="0.0" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="Jqk-Kd-IYf"/>
+                                    <constraint firstAttribute="height" constant="100" id="nHJ-lg-dA8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="rZV-Wf-zoQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-ef-oKZ">
+                                <rect key="frame" x="56" y="543" width="263" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7nl-C9-CSL"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapResultButton:" destination="3bU-DJ-BpD" eventType="touchUpInside" id="3dP-xh-mNI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M51-n2-3HN">
+                                <rect key="frame" x="56" y="220" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hVd-ef-oKZ" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="7TV-55-g1A"/>
+                            <constraint firstItem="DVn-Mr-kxc" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="8iI-RF-5Mh"/>
+                            <constraint firstItem="H4a-oA-l45" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="Gba-FT-VF7"/>
+                            <constraint firstItem="fPQ-Zx-ITd" firstAttribute="top" secondItem="bDz-ZO-R1U" secondAttribute="bottom" constant="80" id="HMr-e7-2MM"/>
+                            <constraint firstItem="M51-n2-3HN" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="JRQ-kg-Y3J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H4a-oA-l45" secondAttribute="trailing" constant="40" id="KsM-UN-umH"/>
+                            <constraint firstItem="DVn-Mr-kxc" firstAttribute="top" secondItem="bDz-ZO-R1U" secondAttribute="bottom" constant="80" id="NM4-BQ-BFt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hVd-ef-oKZ" secondAttribute="trailing" constant="40" id="QcO-ho-7qG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fPQ-Zx-ITd" secondAttribute="trailing" constant="40" id="UQr-o2-UUJ"/>
+                            <constraint firstItem="AZZ-Mg-hJw" firstAttribute="top" secondItem="hVd-ef-oKZ" secondAttribute="bottom" constant="80" id="ah5-69-Iji"/>
+                            <constraint firstItem="H4a-oA-l45" firstAttribute="top" secondItem="fPQ-Zx-ITd" secondAttribute="bottom" constant="50" id="b3E-L8-7QU"/>
+                            <constraint firstItem="M51-n2-3HN" firstAttribute="top" secondItem="DVn-Mr-kxc" secondAttribute="bottom" constant="20" id="ijN-jh-C8L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greenImageView" destination="DVn-Mr-kxc" id="hf0-Q8-lDU"/>
+                        <outlet property="resultBgImageView" destination="fPQ-Zx-ITd" id="boO-w1-unp"/>
+                        <outlet property="resultImageView" destination="H4a-oA-l45" id="2ad-Cu-DmV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYH-d5-Z1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="-708.39580209895053"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5aV-Io-AIz">
             <objects>
@@ -45,4 +126,8 @@
             <point key="canvasLocation" x="286" y="13"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="greenBg" width="690" height="388"/>
+        <image name="resultBg" width="1280" height="800"/>
+    </resources>
 </document>
