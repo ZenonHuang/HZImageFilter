@@ -56,13 +56,14 @@
 		2505A24F1EB61CAB00BCC6AD /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				25E01FFE1EB822830037CD2D /* CoreImage */,
 				25E020031EB884430037CD2D /* CoreVideo */,
 				25E01FFF1EB822940037CD2D /* CustomCoreImage */,
-				25E01FFE1EB822830037CD2D /* CoreImage */,
 				251515591EB98716008321A3 /* Tool.h */,
 				2515155A1EB98748008321A3 /* Tool.m */,
 			);
 			name = Demo;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		2505A2501EB61CBA00BCC6AD /* Resource */ = {
@@ -73,6 +74,7 @@
 				2505A24D1EB617C200BCC6AD /* dataList.plist */,
 			);
 			name = Resource;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		256FFD941EB4CECA0087FCE6 = {
@@ -94,15 +96,15 @@
 		256FFD9F1EB4CECA0087FCE6 /* HZImageFilter */ = {
 			isa = PBXGroup;
 			children = (
-				2505A2501EB61CBA00BCC6AD /* Resource */,
 				2505A24F1EB61CAB00BCC6AD /* Demo */,
+				2505A2501EB61CBA00BCC6AD /* Resource */,
+				256FFDA01EB4CECA0087FCE6 /* Supporting Files */,
 				256FFDA31EB4CECA0087FCE6 /* AppDelegate.h */,
 				256FFDA41EB4CECA0087FCE6 /* AppDelegate.m */,
+				256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */,
+				256FFDA91EB4CECA0087FCE6 /* Main.storyboard */,
 				256FFDA61EB4CECA0087FCE6 /* ViewController.h */,
 				256FFDA71EB4CECA0087FCE6 /* ViewController.m */,
-				256FFDA91EB4CECA0087FCE6 /* Main.storyboard */,
-				256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */,
-				256FFDA01EB4CECA0087FCE6 /* Supporting Files */,
 			);
 			path = HZImageFilter;
 			sourceTree = "<group>";
@@ -113,24 +115,27 @@
 				256FFDA11EB4CECA0087FCE6 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		25E01FFE1EB822830037CD2D /* CoreImage */ = {
 			isa = PBXGroup;
 			children = (
-				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
 				2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */,
+				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
 			);
 			name = CoreImage;
+			path = CoreImage;
 			sourceTree = "<group>";
 		};
 		25E01FFF1EB822940037CD2D /* CustomCoreImage */ = {
 			isa = PBXGroup;
 			children = (
-				25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */,
 				25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */,
+				25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */,
 			);
 			name = CustomCoreImage;
+			path = CustomCoreImage;
 			sourceTree = "<group>";
 		};
 		25E020031EB884430037CD2D /* CoreVideo */ = {
@@ -140,6 +145,7 @@
 				25E020051EB884A70037CD2D /* HZVideoViewController.m */,
 			);
 			name = CoreVideo;
+			path = CoreVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +240,7 @@
 				256FFDAA1EB4CECA0087FCE6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */ = {
@@ -242,6 +249,7 @@
 				256FFDAF1EB4CECA0087FCE6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4GK5VN4446;
-				INFOPLIST_FILE = HZImageFilter/Info.plist;
+				INFOPLIST_FILE = HZImageFilter/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzgo.HZImageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,7 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4GK5VN4446;
-				INFOPLIST_FILE = HZImageFilter/Info.plist;
+				INFOPLIST_FILE = HZImageFilter/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzgo.HZImageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
