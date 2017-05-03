@@ -59,7 +59,6 @@ void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v ){
                 // Convert RGB to HSV
                 // You can find publicly available rgbToHSV functions on the Internet
                 RGBtoHSV(rgb[0],rgb[1],rgb[2], &hsv[0],&hsv[1],&hsv[2]);
-                
                 //green  
 //                float alpha = (hsv[0] > 80 && hsv[0] < 160) ? 0.0f:1.0f;
                 //颜色判断 
