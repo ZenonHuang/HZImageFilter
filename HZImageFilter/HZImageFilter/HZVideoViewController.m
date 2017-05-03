@@ -31,16 +31,16 @@
 @implementation HZVideoViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-//    self.view.backgroundColor=[UIColor whiteColor];
-
+    //    self.view.backgroundColor=[UIColor whiteColor];
     
     
     
     
     
-//    [self.view addSubview:self.glkView];
+    
+    //    [self.view addSubview:self.glkView];
     self.view=self.glkView;
-           
+    
     
     [self.session addInput:self.input];
     
@@ -55,32 +55,32 @@
         connection.videoOrientation = AVCaptureVideoOrientationPortrait;
     }
     [self.session startRunning];
-
-
+    
+    
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     
     
     /**  取图片渲染 **/
-        // UIImage *image = imageFromSampleBuffer(sampleBuffer);
+    // UIImage *image = imageFromSampleBuffer(sampleBuffer);
     CVPixelBufferRef pixelBuffer = (CVPixelBufferRef)CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *image = [CIImage imageWithCVPixelBuffer:pixelBuffer];
     
-//    CGRect rect = [image extent];
-//    rect.origin.y = 200;
-//    rect.size.width  = ScreenWidth; //640;
-//    rect.size.height  = ScreenHeight; //(640.0/480.0)*640;
+    //    CGRect rect = [image extent];
+    //    rect.origin.y = 200;
+    //    rect.size.width  = ScreenWidth; //640;
+    //    rect.size.height  = ScreenHeight; //(640.0/480.0)*640;
     
     /**
-    CIFilter *filter =[CIFilter filterWithName:@"CISepiaTone"];
-    [filter setValue:image forKey:kCIInputImageKey];
-    [filter setValue:@0.8 forKey:kCIInputIntensityKey];
-    image = filter.outputImage;
-        **/
+     CIFilter *filter =[CIFilter filterWithName:@"CISepiaTone"];
+     [filter setValue:image forKey:kCIInputImageKey];
+     [filter setValue:@0.8 forKey:kCIInputIntensityKey];
+     image = filter.outputImage;
+     **/
     
-       
- 
+    
+    
     /** 消色 **/
     CIImage *myImage = image;
     // Allocate memory
@@ -103,15 +103,13 @@
                 float alpha = (hsv[0] >=85 && hsv[0] <= 155) ? 0.0f:1.0f;
                 //饱和度
                 if (hsv[1]<0.2) {
-                     alpha=1.0f;
+                    alpha=1.0f;
                 }
                 //亮度
                 if (hsv[2]<0.2) {
                     alpha=1.0f;
                 }
-                
                 //blue        float alpha = (hsv[0] > 210 && hsv[0] < 270) ? 0.0f:1.0f;
-                
                 // Calculate premultiplied alpha values for the cube
                 c[0] = rgb[0] * alpha;
                 c[1] = rgb[1] * alpha;
@@ -132,26 +130,31 @@
     [colorCube setValue:myImage forKey:@"inputImage"];
     [colorCube setValue:data forKey:@"inputCubeData"];
     myImage = colorCube.outputImage;
-
+    
     /** 组合 **/
-
+    
     CIImage *resulImage = [[CIFilter filterWithName:@"CISourceOverCompositing" 
                                       keysAndValues:kCIInputImageKey,myImage,kCIInputBackgroundImageKey,self.bgImage,nil] 
                            valueForKey:kCIOutputImageKey];
+    
     
     if( !(self.glContext == [EAGLContext currentContext])) {
         [EAGLContext setCurrentContext:self.glContext];
     }
     
-    
-    
     [self.ciContext drawImage:resulImage
                        inRect:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2) 
                      fromRect:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2) ];
     
-//    glView.bindDrawable()
-//    ciContext.drawImage(image, inRect:image.extent(), fromRect: image.extent())
-//    glView.display()
+    
+    
+    //    glView.bindDrawable()
+    //    ciContext.drawImage(image, inRect:image.extent(), fromRect: image.extent())
+    //    glView.display()
+    
+    // 实时渲染
+    //    [self.pixellateFilter setValue:@(sender.value) forKey:@"inputRadius"];
+    //    [self.glkView.context presentRenderbuffer:GL_RENDERBUFFER];
     
 }
 
@@ -160,6 +163,7 @@
 #pragma mark - getter
 -(EAGLContext *)glContext{
     if (!_glContext) {
+        //        contextWithEAGLContext创建的 context 支持实时渲染，渲染图像的过程始终在 GPU 上进行，并且永远不会复制回 CPU 存储器上
         _glContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];//es 1 2 3区别？
     }
     return _glContext;
@@ -167,9 +171,9 @@
 
 -(GLKView *)glkView{
     if (!_glkView) {
-            //opengl es 单位是像素
+        //opengl es 单位是像素
         _glkView = [[GLKView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2)
-                                            context:self.glContext];
+                                          context:self.glContext];
         //    drawableColorFormat  
         //    你的OpenGL上下文有一个缓冲区，它用以存储将在屏幕中显示的颜色。你可以使用其属性来设置缓冲区中每个像素的颜色格式。  
         //    缺省值是GLKViewDrawableColorFormatRGBA8888，即缓冲区的每个像素的最小组成部分(-个像素有四个元素组成 RGBA)使用8个bit(如R使用8个bit)（所以每个像素4个字节 既 4*8 个bit）。这非常好，因为它给了你提供了最广泛的颜色范围，让你的app看起来更好。  
@@ -188,6 +192,10 @@
 
 -(CIContext *)ciContext{
     if (!_ciContext) {
+        //CPU渲染
+        //[CIContext contextWithOptions:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:kCIContextUseSoftwareRenderer]];
+        
+        // 创建基于GPU的CIContext对象
         _ciContext = [CIContext contextWithEAGLContext:self.glContext];
     }
     return _ciContext;
@@ -210,7 +218,7 @@
         //input
         AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         NSError *error;
-       _input = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
+        _input = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
     }
     return _input;
 }

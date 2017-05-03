@@ -11,7 +11,6 @@
 
 static NSString *DataCellIdentifier      = @"DataCellTableIdentifier";
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
-
 @property (nonatomic, readwrite, strong) UITableView         *tableView;
 @property (nonatomic, readwrite, strong) NSArray             *totalArray;
 @end
@@ -27,7 +26,6 @@ static NSString *DataCellIdentifier      = @"DataCellTableIdentifier";
     self.totalArray = [[NSArray alloc] initWithContentsOfFile:mineListPath];
     
     [self.view addSubview:self.tableView];
-    
 }
 
 
