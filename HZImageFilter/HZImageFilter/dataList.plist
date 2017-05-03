@@ -18,5 +18,11 @@
 		<key>title</key>
 		<string>CustomFilter</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>CoreImageForVideo</string>
+		<key>vc</key>
+		<string>HZVideoViewController</string>
+	</dict>
 </array>
 </plist>

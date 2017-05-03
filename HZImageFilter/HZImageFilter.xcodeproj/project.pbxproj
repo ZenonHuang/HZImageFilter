@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2505A24E1EB617C200BCC6AD /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2505A24D1EB617C200BCC6AD /* dataList.plist */; };
 		2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */; };
+		2515155B1EB98748008321A3 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2515155A1EB98748008321A3 /* Tool.m */; };
 		256FFDA21EB4CECA0087FCE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 256FFDA11EB4CECA0087FCE6 /* main.m */; };
 		256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256FFDA41EB4CECA0087FCE6 /* AppDelegate.m */; };
 		256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256FFDA71EB4CECA0087FCE6 /* ViewController.m */; };
@@ -17,12 +18,15 @@
 		256FFDB01EB4CECA0087FCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */; };
 		25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */; };
 		25E020011EB822B30037CD2D /* ChromaKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E020001EB822B30037CD2D /* ChromaKey.m */; };
+		25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E020051EB884A70037CD2D /* HZVideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2505A24D1EB617C200BCC6AD /* dataList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
 		2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCoreImageViewController.m; sourceTree = "<group>"; };
 		2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCoreImageViewController.h; sourceTree = "<group>"; };
+		251515591EB98716008321A3 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		2515155A1EB98748008321A3 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		256FFD9D1EB4CECA0087FCE6 /* HZImageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZImageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		256FFDA11EB4CECA0087FCE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		256FFDA31EB4CECA0087FCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 		25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCustomFilterViewController.h; sourceTree = "<group>"; };
 		25E020001EB822B30037CD2D /* ChromaKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromaKey.m; sourceTree = "<group>"; };
 		25E020021EB837DD0037CD2D /* ChromaKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChromaKey.h; sourceTree = "<group>"; };
+		25E020041EB884900037CD2D /* HZVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVideoViewController.h; sourceTree = "<group>"; };
+		25E020051EB884A70037CD2D /* HZVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZVideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,11 @@
 		2505A24F1EB61CAB00BCC6AD /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				25E020031EB884430037CD2D /* CoreVideo */,
 				25E01FFF1EB822940037CD2D /* CustomCoreImage */,
 				25E01FFE1EB822830037CD2D /* CoreImage */,
+				251515591EB98716008321A3 /* Tool.h */,
+				2515155A1EB98748008321A3 /* Tool.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -127,6 +136,15 @@
 				25E020021EB837DD0037CD2D /* ChromaKey.h */,
 			);
 			name = CustomCoreImage;
+			sourceTree = "<group>";
+		};
+		25E020031EB884430037CD2D /* CoreVideo */ = {
+			isa = PBXGroup;
+			children = (
+				25E020041EB884900037CD2D /* HZVideoViewController.h */,
+				25E020051EB884A70037CD2D /* HZVideoViewController.m */,
+			);
+			name = CoreVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,12 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */,
 				256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */,
 				25E020011EB822B30037CD2D /* ChromaKey.m in Sources */,
 				256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */,
 				25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */,
 				256FFDA21EB4CECA0087FCE6 /* main.m in Sources */,
 				2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */,
+				2515155B1EB98748008321A3 /* Tool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

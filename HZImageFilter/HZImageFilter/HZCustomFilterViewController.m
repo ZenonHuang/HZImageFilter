@@ -9,6 +9,7 @@
 #import "HZCustomFilterViewController.h"
 #import <CoreImage/CoreImage.h>
 #import "ChromaKey.h"
+#import "Tool.h"
 
 //#import <OpenGLES/EAGL.h>
 
@@ -147,7 +148,10 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
      // You can find publicly available rgbToHSV functions on the Internet
      RGBtoHSV(rgb[0],rgb[1],rgb[2], &hsv[0],&hsv[1],&hsv[2]);
      
-     float alpha = (hsv[0] > 80 && hsv[0] < 160) ? 0.0f:1.0f;
+//green  
+         float alpha = (hsv[0] > 80 && hsv[0] < 160) ? 0.0f:1.0f;
+ //blue        float alpha = (hsv[0] > 210 && hsv[0] < 270) ? 0.0f:1.0f;
+         
      // Calculate premultiplied alpha values for the cube
      c[0] = rgb[0] * alpha;
      c[1] = rgb[1] * alpha;
@@ -199,30 +203,6 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
 }
 
 
-void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v ){
-    float min, max, delta;
-    min = MIN( r, MIN(g, b) );
-    max = MAX( r, MAX(g, b) );
-    *v = max;                // v
-    delta = max - min;
-    if( max != 0 )
-        *s = delta / max;      // s
-    else {
-        // r = g = b = 0       // s = 0, v is undefined
-        *s = 0;
-        *h = -1;
-        return;
-    }
-    if( r == max )
-        *h = ( g - b ) / delta;        // between yellow & magenta
-    else if( g == max )
-        *h = 2 + ( b - r ) / delta; // between cyan & yellow
-    else
-        *h = 4 + ( r - g ) / delta; // between magenta & cyan
-    *h *= 60;               // degrees
-    if( *h < 0 )
-        *h += 360;
-}
 
 #pragma mark - private
 - (void)hz_addView:(UIView *)view touchAction:(SEL)action
