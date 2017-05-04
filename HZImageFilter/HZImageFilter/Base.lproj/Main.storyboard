@@ -62,7 +62,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="06T-NW-B6d"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="组合">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -122,6 +122,56 @@
             </objects>
             <point key="canvasLocation" x="940" y="-708.39580209895053"/>
         </scene>
+        <!--Detector View Controller-->
+        <scene sceneID="WYG-Ja-dAg">
+            <objects>
+                <viewController storyboardIdentifier="detectorVC" id="iKT-S0-M0J" customClass="HZDetectorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KsX-yf-7rq"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUP-RC-brK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ku-9w-rNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detector" translatesAutoresizingMaskIntoConstraints="NO" id="tnM-Fl-1aF">
+                                <rect key="frame" x="66" y="70" width="243" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="a7J-bq-rYf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkc-ve-TdQ">
+                                <rect key="frame" x="66" y="563" width="243" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9Ha-Ym-SzL"/>
+                                </constraints>
+                                <state key="normal" title="识别">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSubmitButton:" destination="iKT-S0-M0J" eventType="touchUpInside" id="SYX-Zj-J05"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hkc-ve-TdQ" firstAttribute="leading" secondItem="8ku-9w-rNZ" secondAttribute="leadingMargin" constant="50" id="5V3-7S-8BR"/>
+                            <constraint firstItem="cUP-RC-brK" firstAttribute="top" secondItem="Hkc-ve-TdQ" secondAttribute="bottom" constant="60" id="7vN-gh-ImG"/>
+                            <constraint firstItem="tnM-Fl-1aF" firstAttribute="top" secondItem="KsX-yf-7rq" secondAttribute="bottom" constant="50" id="VX8-AW-SrP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hkc-ve-TdQ" secondAttribute="trailing" constant="50" id="YGl-00-REV"/>
+                            <constraint firstItem="tnM-Fl-1aF" firstAttribute="leading" secondItem="8ku-9w-rNZ" secondAttribute="leadingMargin" constant="50" id="sZc-TP-vhB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tnM-Fl-1aF" secondAttribute="trailing" constant="50" id="wAL-LZ-Fc5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="oldImageView" destination="tnM-Fl-1aF" id="RBy-qL-J0F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NS4-O7-mmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.4000000000001" y="-706.59670164917543"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5aV-Io-AIz">
             <objects>
@@ -140,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="detector" width="200" height="150"/>
         <image name="greenBg" width="690" height="388"/>
         <image name="resultBg" width="1280" height="800"/>
     </resources>

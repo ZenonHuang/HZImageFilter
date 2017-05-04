@@ -20,9 +20,15 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>CoreImageForVideo</string>
+		<string>Video</string>
 		<key>vc</key>
 		<string>HZVideoViewController</string>
+	</dict>
+	<dict>
+		<key>StoryBoardID</key>
+		<string>detectorVC</string>
+		<key>title</key>
+		<string>DetectorImage</string>
 	</dict>
 </array>
 </plist>
