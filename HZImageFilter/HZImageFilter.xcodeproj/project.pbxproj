@@ -59,10 +59,10 @@
 		2505A24F1EB61CAB00BCC6AD /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				25E01FFF1EB822940037CD2D /* Custom */,
 				2544B5781EBB13EB0036AA41 /* Detector */,
 				25E01FFE1EB822830037CD2D /* Filters */,
 				25E020031EB884430037CD2D /* VideoFilter */,
-				25E01FFF1EB822940037CD2D /* Custom */,
 				251515591EB98716008321A3 /* Tool.h */,
 				2515155A1EB98748008321A3 /* Tool.m */,
 			);
@@ -86,6 +86,7 @@
 				2544B57A1EBB140C0036AA41 /* HZDetectorViewController.m */,
 			);
 			name = Detector;
+			path = Detector;
 			sourceTree = "<group>";
 		};
 		256FFD941EB4CECA0087FCE6 = {
@@ -112,8 +113,8 @@
 				256FFDA01EB4CECA0087FCE6 /* Supporting Files */,
 				256FFDA31EB4CECA0087FCE6 /* AppDelegate.h */,
 				256FFDA41EB4CECA0087FCE6 /* AppDelegate.m */,
-				256FFDA91EB4CECA0087FCE6 /* Main.storyboard */,
 				256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */,
+				256FFDA91EB4CECA0087FCE6 /* Main.storyboard */,
 				256FFDA61EB4CECA0087FCE6 /* ViewController.h */,
 				256FFDA71EB4CECA0087FCE6 /* ViewController.m */,
 			);
@@ -135,7 +136,7 @@
 				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
 			);
 			name = Filters;
-			path = CoreImage;
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		25E01FFF1EB822940037CD2D /* Custom */ = {
@@ -145,7 +146,7 @@
 				25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */,
 			);
 			name = Custom;
-			path = CustomCoreImage;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		25E020031EB884430037CD2D /* VideoFilter */ = {
@@ -155,7 +156,7 @@
 				25E020051EB884A70037CD2D /* HZVideoViewController.m */,
 			);
 			name = VideoFilter;
-			path = CoreVideo;
+			path = VideoFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
