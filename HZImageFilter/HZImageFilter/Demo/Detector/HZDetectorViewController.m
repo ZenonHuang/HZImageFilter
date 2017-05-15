@@ -28,7 +28,6 @@
     NSArray *faceArray = [detector featuresInImage:image
                                            options:nil];
     // Create a green circle to cover the rects that are returned.
-    
 //    CIImage *maskImage = nil;
        CIImage *maskImage = [[CIImage alloc] initWithImage:self.oldImageView.image];
     
@@ -40,30 +39,24 @@
                                         withInputParameters:@{
                                                               @"inputRadius0": @(radius),
                                                               @"inputRadius1": @(radius + 1.0f),
-                                                              @"inputColor0": [CIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:1.0],
+                                                              @"inputColor0": [CIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.3],
                                                               @"inputColor1": [CIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0],
                                                               kCIInputCenterKey: [CIVector vectorWithX:centerX Y:centerY],
                                                               }];
         CIImage *circleImage = [radialGradient valueForKey:kCIOutputImageKey];
         
-        if (nil == maskImage)
+        if (nil == maskImage){
             maskImage = circleImage;
-        else
+        }else{
             maskImage = [[CIFilter filterWithName:@"CISourceOverCompositing" 
                               withInputParameters:@{
                                                     kCIInputImageKey: circleImage,
                                                     kCIInputBackgroundImageKey: maskImage,
                                                     }] 
                          valueForKey:kCIOutputImageKey];
+        }
     }
-    
-    
-    //组合
-//    UIImage *oldImage=[self.oldImageView.image copy];
-//    
-//    CIImage *resulImage = [[CIFilter filterWithName:@"CISourceOverCompositing" 
-//                                      keysAndValues:kCIInputImageKey,maskImage,kCIInputBackgroundImageKey,oldImage,nil] 
-//                           valueForKey:kCIOutputImageKey];
+
     
     
     //更新
