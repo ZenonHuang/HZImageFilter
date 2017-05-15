@@ -21,5 +21,5 @@ iOS 原生图片滤镜使用,并根据苹果文档尝试了抠图，拼图。最
 ![pre](http://7xiym9.com1.z0.glb.clouddn.com/DetectorPre.png?imageView2/4/w/300)
 
 #### 检测图片
-![pre](http://7xiym9.com1.z0.glb.clouddn.com/Detector.png?imageView2/4/w/300)
+![detecotr](http://7xiym9.com1.z0.glb.clouddn.com/Detector.png?imageView2/4/w/300)
 
