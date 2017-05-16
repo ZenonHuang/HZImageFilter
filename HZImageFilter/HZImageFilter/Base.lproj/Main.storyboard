@@ -134,7 +134,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detector" translatesAutoresizingMaskIntoConstraints="NO" id="tnM-Fl-1aF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detector2" translatesAutoresizingMaskIntoConstraints="NO" id="tnM-Fl-1aF">
                                 <rect key="frame" x="66" y="70" width="243" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="174" id="a7J-bq-rYf"/>
@@ -190,7 +190,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="detector" width="200" height="150"/>
+        <image name="detector2" width="347" height="507"/>
         <image name="greenBg" width="711" height="400"/>
         <image name="resultBg" width="711" height="400"/>
     </resources>

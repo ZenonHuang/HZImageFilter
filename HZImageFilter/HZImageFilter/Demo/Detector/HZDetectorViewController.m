@@ -18,52 +18,102 @@
 
 
 - (IBAction)tapSubmitButton:(id)sender {
+    for (UIView *view in self.oldImageView.subviews) {
+        [view removeFromSuperview];
+    }
     
+    // 图像识别能力：可以在CIDetectorAccuracyHigh(较强的处理能力)与CIDetectorAccuracyLow(较弱的处理能力)中选择，因为想让准确度高一些在这里选择CIDetectorAccuracyHigh
+    NSDictionary *opts = [NSDictionary dictionaryWithObject:CIDetectorAccuracyHigh 
+                                                     forKey:CIDetectorAccuracy];
+
+    CIDetector *detector=[CIDetector detectorOfType:CIDetectorTypeFace context:nil options:opts];
     
-    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
-                                              context:nil
-                                              options:nil];
+//    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
+//                                              context:nil
+//                                              options:nil];
     
     CIImage *image=[[CIImage alloc] initWithImage:self.oldImageView.image];
     NSArray *faceArray = [detector featuresInImage:image
                                            options:nil];
-    // Create a green circle to cover the rects that are returned.
-//    CIImage *maskImage = nil;
-       CIImage *maskImage = [[CIImage alloc] initWithImage:self.oldImageView.image];
-    
-    for (CIFeature *f in faceArray) {
-        CGFloat centerX = f.bounds.origin.x + f.bounds.size.width / 2.0;
-        CGFloat centerY = f.bounds.origin.y + f.bounds.size.height / 2.0;
-        CGFloat radius = MIN(f.bounds.size.width, f.bounds.size.height) / 1.5;
-        
-        
-        CIFilter *radialGradient = [CIFilter filterWithName:@"CIRadialGradient" 
-                                        withInputParameters:@{
-                                                              @"inputRadius0": @(radius),
-                                                              @"inputRadius1": @(radius + 1.0f),
-                                                              @"inputColor0": [CIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.3],
-                                                              @"inputColor1": [CIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0],
-                                                              kCIInputCenterKey: [CIVector vectorWithX:centerX Y:centerY],
-                                                              }];
-        CIImage *circleImage = [radialGradient valueForKey:kCIOutputImageKey];
-        
-        
-        if (nil == maskImage){
-            maskImage = circleImage;
-        }else{
-            maskImage = [[CIFilter filterWithName:@"CISourceOverCompositing" 
-                              withInputParameters:@{
-                                                    kCIInputImageKey: circleImage,
-                                                    kCIInputBackgroundImageKey: maskImage,
-                                                    }] 
-                         valueForKey:kCIOutputImageKey];
-        }
-    }
 
+    /** 将 Core Image 坐标转换成 UIView 坐标 **/ 
+    //得到图片的尺寸
+    CGSize ciImageSize=   [image extent].size;;
+    //将image沿y轴对称
+    CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, -1);
+    //将图片上移,为负数
+    transform = CGAffineTransformTranslate(transform,0,-ciImageSize.height);
     
+    for (CIFeature *f in faceArray){
+        
+        if ([f.type isEqualToString:CIFeatureTypeFace]) {
+            
+            CIFaceFeature *faceFeature=(CIFaceFeature *)f;
+            // 实现坐标转换
+            CGSize viewSize = self.oldImageView.bounds.size;           
+            CGFloat scale = MIN(viewSize.width / ciImageSize.width,
+                                viewSize.height / ciImageSize.height);
+            CGFloat offsetX = (viewSize.width - ciImageSize.width * scale) / 2;
+            CGFloat offsetY = (viewSize.height - ciImageSize.height * scale) / 2;
+            // 缩放
+            CGAffineTransform scaleTransform = CGAffineTransformMakeScale(scale, scale);
+            //获取人脸的frame
+            CGRect faceViewBounds = CGRectApplyAffineTransform(faceFeature.bounds, transform);
+            // 修正
+            faceViewBounds = CGRectApplyAffineTransform(faceViewBounds,scaleTransform);
+            faceViewBounds.origin.x += offsetX;
+            faceViewBounds.origin.y += offsetY;
+            
+            UIView *faceView=[[UIView alloc] initWithFrame:faceViewBounds];
+            faceView.layer.borderWidth=3;
+            faceView.layer.borderColor=[UIColor orangeColor].CGColor;
+            
+            [self.oldImageView addSubview:faceView];
+            
+            // 判断是否有左眼位置
+            if(faceFeature.hasLeftEyePosition){
+            
+                CGFloat x=faceFeature.leftEyePosition.x;
+                CGFloat y=faceFeature.leftEyePosition.y;
+                CGRect leftEyeRect=CGRectMake(x-10/2,y-10/2, 10, 10);
+                
+                //获取人脸的frame
+                CGRect leftEyeBounds = CGRectApplyAffineTransform(leftEyeRect, transform);
+                leftEyeBounds=CGRectApplyAffineTransform(leftEyeBounds,scaleTransform);
+                leftEyeBounds.origin.x += offsetX;
+                leftEyeBounds.origin.y += offsetY;
+                
+                UIView *leftEyeView = [[UIView alloc] initWithFrame:leftEyeBounds];
+               leftEyeView .backgroundColor = [UIColor orangeColor];
+                [self.oldImageView addSubview:leftEyeView ];
+                
+            }
+            // 判断是否有右眼位置
+            if(faceFeature.hasRightEyePosition){
+                CGFloat x=faceFeature.rightEyePosition.x;
+                CGFloat y=faceFeature.rightEyePosition.y;
+                CGRect rightEyeRect=CGRectMake(x-10/2,y-10/2, 10, 10);
+                
+                //获取人脸的frame
+                CGRect rightEyeBounds = CGRectApplyAffineTransform(rightEyeRect, transform);
+                rightEyeBounds=CGRectApplyAffineTransform(rightEyeBounds,scaleTransform);
+                rightEyeBounds.origin.x += offsetX;
+                rightEyeBounds.origin.y += offsetY;
+                
+                UIView *rightEyeView = [[UIView alloc] initWithFrame:rightEyeBounds];
+                rightEyeView.backgroundColor = [UIColor orangeColor];
+                [self.oldImageView addSubview:rightEyeView];
+            
+            }
+            // 判断是否有嘴位置
+            if(faceFeature.hasMouthPosition){
+            
+            }
+
+        }
+        
+    }
     
-    //更新
-    self.oldImageView.image=[UIImage imageWithCIImage:maskImage];
 }
 
 @end
