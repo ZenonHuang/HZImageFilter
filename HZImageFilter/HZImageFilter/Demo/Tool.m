@@ -96,17 +96,16 @@ void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v ){
     
     
 #pragma mark 组合
-    
-//    CIContext *context = [CIContext contextWithOptions:nil];
-    CIImage *backgroundCIImage = [[CIImage alloc] initWithImage:bgImage];// [CIImage imageWithCGImage:bgImage.CGImage];
-    
+    CIImage *backgroundCIImage = [[CIImage alloc] initWithImage:bgImage];
     CIImage *resulImage = [[CIFilter filterWithName:@"CISourceOverCompositing" 
                                       keysAndValues:kCIInputImageKey,myImage,kCIInputBackgroundImageKey,backgroundCIImage,nil] 
                            valueForKey:kCIOutputImageKey];
+    
 //    CGRect extent = [resulImage extent];
+//    CIContext *context = [CIContext contextWithOptions:nil];
 //    CGImageRef cgImage = [context createCGImage:resulImage fromRect:extent];
-    
-    
+//    return [[CIImage alloc] initWithCGImage:cgImage];
+  
     return resulImage;
 
 }

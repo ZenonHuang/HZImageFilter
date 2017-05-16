@@ -65,7 +65,8 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
 - (IBAction)tapResultButton:(id)sender {
     CIImage *image= [Tool hz_inputGreenBgImg:self.greenImageView.image 
                              backgroundImage:self.resultBgImageView.image];
-    self.resultImageView.image=[UIImage imageWithCIImage:image];
+    
+    self.resultImageView.image=[[UIImage imageWithCIImage:image] copy];
 }
 
 

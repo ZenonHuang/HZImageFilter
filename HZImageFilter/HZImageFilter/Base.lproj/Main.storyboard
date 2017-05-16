@@ -44,20 +44,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NvQ-r7-BPH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resultBg" translatesAutoresizingMaskIntoConstraints="NO" id="fPQ-Zx-ITd">
-                                        <rect key="frame" x="56" y="183" width="263" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resultBg" translatesAutoresizingMaskIntoConstraints="NO" id="fPQ-Zx-ITd">
+                                        <rect key="frame" x="76" y="203" width="223" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Trs-VK-pIQ"/>
+                                            <constraint firstAttribute="height" constant="120" id="Trs-VK-pIQ"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenBg" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Mr-kxc">
-                                        <rect key="frame" x="56" y="60" width="263" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenBg" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Mr-kxc">
+                                        <rect key="frame" x="76" y="60" width="223" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="ACE-nG-wss"/>
+                                            <constraint firstAttribute="height" constant="120" id="ACE-nG-wss"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-ef-oKZ">
-                                        <rect key="frame" x="56" y="528" width="263" height="44"/>
+                                        <rect key="frame" x="56" y="588" width="263" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="06T-NW-B6d"/>
@@ -69,14 +69,14 @@
                                             <action selector="tapResultButton:" destination="3bU-DJ-BpD" eventType="touchUpInside" id="3dP-xh-mNI"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-oA-l45">
-                                        <rect key="frame" x="56" y="352" width="263" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-oA-l45">
+                                        <rect key="frame" x="76" y="392" width="223" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="hcn-BX-Z46"/>
+                                            <constraint firstAttribute="height" constant="120" id="hcn-BX-Z46"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M51-n2-3HN">
-                                        <rect key="frame" x="70" y="312" width="98.5" height="30"/>
+                                        <rect key="frame" x="70" y="352" width="98.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="red-mH-Q6i"/>
                                         </constraints>
@@ -99,16 +99,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NvQ-r7-BPH" secondAttribute="trailing" id="064-fm-wzc"/>
                             <constraint firstItem="hVd-ef-oKZ" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="0EA-kx-Hqt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H4a-oA-l45" secondAttribute="trailing" constant="40" id="B0n-AU-PUl"/>
-                            <constraint firstItem="H4a-oA-l45" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="BVA-eP-gxD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H4a-oA-l45" secondAttribute="trailing" constant="60" id="B0n-AU-PUl"/>
+                            <constraint firstItem="H4a-oA-l45" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="60" id="BVA-eP-gxD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hVd-ef-oKZ" secondAttribute="trailing" constant="40" id="DJs-1v-EiL"/>
                             <constraint firstItem="AZZ-Mg-hJw" firstAttribute="top" secondItem="NvQ-r7-BPH" secondAttribute="bottom" id="GAZ-27-HLE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DVn-Mr-kxc" secondAttribute="trailing" constant="40" id="Hor-L2-sUu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fPQ-Zx-ITd" secondAttribute="trailing" constant="40" id="L4d-U4-w9c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DVn-Mr-kxc" secondAttribute="trailing" constant="60" id="Hor-L2-sUu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fPQ-Zx-ITd" secondAttribute="trailing" constant="60" id="L4d-U4-w9c"/>
                             <constraint firstItem="NvQ-r7-BPH" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leading" id="PSn-OO-wJf"/>
-                            <constraint firstItem="fPQ-Zx-ITd" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="VvP-bu-fQL"/>
+                            <constraint firstItem="fPQ-Zx-ITd" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="60" id="VvP-bu-fQL"/>
                             <constraint firstItem="NvQ-r7-BPH" firstAttribute="top" secondItem="8eg-Hx-kmq" secondAttribute="top" id="bNL-sh-AOn"/>
-                            <constraint firstItem="DVn-Mr-kxc" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="40" id="gNZ-93-6fJ"/>
+                            <constraint firstItem="DVn-Mr-kxc" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="60" id="gNZ-93-6fJ"/>
                             <constraint firstItem="M51-n2-3HN" firstAttribute="leading" secondItem="8eg-Hx-kmq" secondAttribute="leadingMargin" constant="54" id="hAl-5r-Jdk"/>
                         </constraints>
                     </view>
@@ -191,7 +191,7 @@
     </scenes>
     <resources>
         <image name="detector" width="200" height="150"/>
-        <image name="greenBg" width="690" height="388"/>
-        <image name="resultBg" width="1280" height="800"/>
+        <image name="greenBg" width="711" height="400"/>
+        <image name="resultBg" width="711" height="400"/>
     </resources>
 </document>
