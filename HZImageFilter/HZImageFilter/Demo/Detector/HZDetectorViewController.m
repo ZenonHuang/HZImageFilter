@@ -35,6 +35,8 @@
         CGFloat centerX = f.bounds.origin.x + f.bounds.size.width / 2.0;
         CGFloat centerY = f.bounds.origin.y + f.bounds.size.height / 2.0;
         CGFloat radius = MIN(f.bounds.size.width, f.bounds.size.height) / 1.5;
+        
+        
         CIFilter *radialGradient = [CIFilter filterWithName:@"CIRadialGradient" 
                                         withInputParameters:@{
                                                               @"inputRadius0": @(radius),
@@ -44,6 +46,7 @@
                                                               kCIInputCenterKey: [CIVector vectorWithX:centerX Y:centerY],
                                                               }];
         CIImage *circleImage = [radialGradient valueForKey:kCIOutputImageKey];
+        
         
         if (nil == maskImage){
             maskImage = circleImage;

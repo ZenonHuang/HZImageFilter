@@ -67,12 +67,14 @@
     CVPixelBufferRef pixelBuffer = (CVPixelBufferRef)CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *image = [CIImage imageWithCVPixelBuffer:pixelBuffer];
     
-    //    CGRect rect = [image extent];
-    //    rect.origin.y = 200;
-    //    rect.size.width  = ScreenWidth; //640;
-    //    rect.size.height  = ScreenHeight; //(640.0/480.0)*640;
+
     
     /**
+ 
+     CGRect rect = [image extent];
+         rect.origin.y = 200;
+         rect.size.width  = ScreenWidth; //640;
+         rect.size.height  = ScreenHeight; //(640.0/480.0)*640;
      CIFilter *filter =[CIFilter filterWithName:@"CISepiaTone"];
      [filter setValue:image forKey:kCIInputImageKey];
      [filter setValue:@0.8 forKey:kCIInputIntensityKey];
@@ -132,7 +134,6 @@
     myImage = colorCube.outputImage;
     
     /** 组合 **/
-    
     CIImage *resulImage = [[CIFilter filterWithName:@"CISourceOverCompositing" 
                                       keysAndValues:kCIInputImageKey,myImage,kCIInputBackgroundImageKey,self.bgImage,nil] 
                            valueForKey:kCIOutputImageKey];

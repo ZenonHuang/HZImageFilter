@@ -67,7 +67,6 @@
     }else{
         //将UIImage转换成CIImage
         CIImage *ciImage = [[CIImage alloc] initWithImage:self.originImage];
-        
         //创建滤镜
         CIFilter *filter = [CIFilter filterWithName:filterName 
                                       keysAndValues:kCIInputImageKey,ciImage, nil];

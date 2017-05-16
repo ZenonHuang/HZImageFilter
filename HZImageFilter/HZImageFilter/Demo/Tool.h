@@ -9,5 +9,4 @@
 @interface Tool : NSObject
 void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v );
 
-+(CIImage *)hz_inputGreenBgImg:(UIImage *)greenImage backgroundImage:(UIImage *)bgImage;
 @end

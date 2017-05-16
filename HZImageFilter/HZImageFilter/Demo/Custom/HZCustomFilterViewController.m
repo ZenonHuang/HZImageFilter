@@ -7,9 +7,9 @@
 //
 
 #import "HZCustomFilterViewController.h"
-#import <CoreImage/CoreImage.h>
-#import "Tool.h"
-
+//#import <CoreImage/CoreImage.h>
+//#import "Tool.h"
+#import "HZChromaKeyFilter.h"
 //#import <OpenGLES/EAGL.h>
 
 @interface HZCustomFilterViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -63,10 +63,10 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
 
 
 - (IBAction)tapResultButton:(id)sender {
-    CIImage *image= [Tool hz_inputGreenBgImg:self.greenImageView.image 
-                             backgroundImage:self.resultBgImageView.image];
-    
-    self.resultImageView.image=[[UIImage imageWithCIImage:image] copy];
+    HZChromaKeyFilter *filter=[[HZChromaKeyFilter alloc] initWithInputImage:self.greenImageView.image  
+                                                            backgroundImage:self.resultBgImageView.image];
+
+    self.resultImageView.image=[[UIImage imageWithCIImage:filter.outputImage] copy];
 }
 
 
