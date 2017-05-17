@@ -175,6 +175,7 @@
 				251541D71ECA9CDC00676235 /* HZChromaKeyFilter.m */,
 			);
 			name = Filter;
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		2544B5781EBB13EB0036AA41 /* Detector */ = {
@@ -206,8 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				25A23EFD1ECBFD100083453C /* Category */,
-				251541D51ECA9B7D00676235 /* Filter */,
 				2505A24F1EB61CAB00BCC6AD /* Demo */,
+				251541D51ECA9B7D00676235 /* Filter */,
 				2505A2501EB61CBA00BCC6AD /* Resource */,
 				256FFDA01EB4CECA0087FCE6 /* Supporting Files */,
 				256FFDA31EB4CECA0087FCE6 /* AppDelegate.h */,
@@ -235,6 +236,7 @@
 				25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */,
 			);
 			name = Category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		25D488D51ECC26CA00E01079 /* halo */ = {

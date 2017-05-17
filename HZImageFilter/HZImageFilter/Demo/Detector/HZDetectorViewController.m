@@ -73,8 +73,6 @@
             
             /** 加光环  **/
             UIImageView *imageView=[UIImageView new];
-            
-            
             CGFloat haloWidth= faceViewBounds.size.width;
             CGFloat haloHeight= haloWidth * 159 / 351;
             
