@@ -70,7 +70,6 @@
         //创建滤镜
         CIFilter *filter = [CIFilter filterWithName:filterName 
                                       keysAndValues:kCIInputImageKey,ciImage, nil];
-        
         //已有的值不改变，其他的设为默认值
         [filter setDefaults];
         

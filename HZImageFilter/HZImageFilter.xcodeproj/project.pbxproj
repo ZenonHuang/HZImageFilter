@@ -18,6 +18,48 @@
 		256FFDAB1EB4CECA0087FCE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDA91EB4CECA0087FCE6 /* Main.storyboard */; };
 		256FFDAD1EB4CECA0087FCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */; };
 		256FFDB01EB4CECA0087FCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */; };
+		25A23EFC1ECBFD070083453C /* UIImageView+Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */; };
+		25D488FF1ECC26CA00E01079 /* halo_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D61ECC26CA00E01079 /* halo_000.png */; };
+		25D489001ECC26CA00E01079 /* halo_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D71ECC26CA00E01079 /* halo_001.png */; };
+		25D489011ECC26CA00E01079 /* halo_002.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D81ECC26CA00E01079 /* halo_002.png */; };
+		25D489021ECC26CA00E01079 /* halo_003.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D91ECC26CA00E01079 /* halo_003.png */; };
+		25D489031ECC26CA00E01079 /* halo_004.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488DA1ECC26CA00E01079 /* halo_004.png */; };
+		25D489041ECC26CA00E01079 /* halo_005.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488DB1ECC26CA00E01079 /* halo_005.png */; };
+		25D489051ECC26CA00E01079 /* halo_006.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488DC1ECC26CA00E01079 /* halo_006.png */; };
+		25D489061ECC26CA00E01079 /* halo_007.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488DD1ECC26CA00E01079 /* halo_007.png */; };
+		25D489071ECC26CA00E01079 /* halo_008.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488DE1ECC26CA00E01079 /* halo_008.png */; };
+		25D489081ECC26CA00E01079 /* halo_009.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488DF1ECC26CA00E01079 /* halo_009.png */; };
+		25D489091ECC26CA00E01079 /* halo_010.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E01ECC26CA00E01079 /* halo_010.png */; };
+		25D4890A1ECC26CA00E01079 /* halo_011.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E11ECC26CA00E01079 /* halo_011.png */; };
+		25D4890B1ECC26CA00E01079 /* halo_012.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E21ECC26CA00E01079 /* halo_012.png */; };
+		25D4890C1ECC26CA00E01079 /* halo_013.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E31ECC26CA00E01079 /* halo_013.png */; };
+		25D4890D1ECC26CA00E01079 /* halo_014.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E41ECC26CA00E01079 /* halo_014.png */; };
+		25D4890E1ECC26CA00E01079 /* halo_015.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E51ECC26CA00E01079 /* halo_015.png */; };
+		25D4890F1ECC26CA00E01079 /* halo_016.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E61ECC26CA00E01079 /* halo_016.png */; };
+		25D489101ECC26CA00E01079 /* halo_017.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E71ECC26CA00E01079 /* halo_017.png */; };
+		25D489111ECC26CA00E01079 /* halo_018.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E81ECC26CA00E01079 /* halo_018.png */; };
+		25D489121ECC26CA00E01079 /* halo_019.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488E91ECC26CA00E01079 /* halo_019.png */; };
+		25D489131ECC26CA00E01079 /* halo_020.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488EA1ECC26CA00E01079 /* halo_020.png */; };
+		25D489141ECC26CA00E01079 /* halo_021.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488EB1ECC26CA00E01079 /* halo_021.png */; };
+		25D489151ECC26CA00E01079 /* halo_022.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488EC1ECC26CA00E01079 /* halo_022.png */; };
+		25D489161ECC26CA00E01079 /* halo_023.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488ED1ECC26CA00E01079 /* halo_023.png */; };
+		25D489171ECC26CA00E01079 /* halo_024.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488EE1ECC26CA00E01079 /* halo_024.png */; };
+		25D489181ECC26CA00E01079 /* halo_025.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488EF1ECC26CA00E01079 /* halo_025.png */; };
+		25D489191ECC26CA00E01079 /* halo_026.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F01ECC26CA00E01079 /* halo_026.png */; };
+		25D4891A1ECC26CA00E01079 /* halo_027.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F11ECC26CA00E01079 /* halo_027.png */; };
+		25D4891B1ECC26CA00E01079 /* halo_028.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F21ECC26CA00E01079 /* halo_028.png */; };
+		25D4891C1ECC26CA00E01079 /* halo_029.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F31ECC26CA00E01079 /* halo_029.png */; };
+		25D4891D1ECC26CA00E01079 /* halo_030.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F41ECC26CA00E01079 /* halo_030.png */; };
+		25D4891E1ECC26CA00E01079 /* halo_031.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F51ECC26CA00E01079 /* halo_031.png */; };
+		25D4891F1ECC26CA00E01079 /* halo_032.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F61ECC26CA00E01079 /* halo_032.png */; };
+		25D489201ECC26CA00E01079 /* halo_033.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F71ECC26CA00E01079 /* halo_033.png */; };
+		25D489211ECC26CA00E01079 /* halo_034.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F81ECC26CA00E01079 /* halo_034.png */; };
+		25D489221ECC26CA00E01079 /* halo_035.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488F91ECC26CA00E01079 /* halo_035.png */; };
+		25D489231ECC26CA00E01079 /* halo_036.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FA1ECC26CA00E01079 /* halo_036.png */; };
+		25D489241ECC26CA00E01079 /* halo_037.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FB1ECC26CA00E01079 /* halo_037.png */; };
+		25D489251ECC26CA00E01079 /* halo_038.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FC1ECC26CA00E01079 /* halo_038.png */; };
+		25D489261ECC26CA00E01079 /* halo_039.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FD1ECC26CA00E01079 /* halo_039.png */; };
+		25D489271ECC26CA00E01079 /* halo_040.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FE1ECC26CA00E01079 /* halo_040.png */; };
 		25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */; };
 		25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E020051EB884A70037CD2D /* HZVideoViewController.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +84,49 @@
 		256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		256FFDAF1EB4CECA0087FCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		256FFDB11EB4CECA0087FCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A23EFA1ECBFD070083453C /* UIImageView+Gif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Gif.h"; sourceTree = "<group>"; };
+		25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Gif.m"; sourceTree = "<group>"; };
+		25D488D61ECC26CA00E01079 /* halo_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_000.png; sourceTree = "<group>"; };
+		25D488D71ECC26CA00E01079 /* halo_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_001.png; sourceTree = "<group>"; };
+		25D488D81ECC26CA00E01079 /* halo_002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_002.png; sourceTree = "<group>"; };
+		25D488D91ECC26CA00E01079 /* halo_003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_003.png; sourceTree = "<group>"; };
+		25D488DA1ECC26CA00E01079 /* halo_004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_004.png; sourceTree = "<group>"; };
+		25D488DB1ECC26CA00E01079 /* halo_005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_005.png; sourceTree = "<group>"; };
+		25D488DC1ECC26CA00E01079 /* halo_006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_006.png; sourceTree = "<group>"; };
+		25D488DD1ECC26CA00E01079 /* halo_007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_007.png; sourceTree = "<group>"; };
+		25D488DE1ECC26CA00E01079 /* halo_008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_008.png; sourceTree = "<group>"; };
+		25D488DF1ECC26CA00E01079 /* halo_009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_009.png; sourceTree = "<group>"; };
+		25D488E01ECC26CA00E01079 /* halo_010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_010.png; sourceTree = "<group>"; };
+		25D488E11ECC26CA00E01079 /* halo_011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_011.png; sourceTree = "<group>"; };
+		25D488E21ECC26CA00E01079 /* halo_012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_012.png; sourceTree = "<group>"; };
+		25D488E31ECC26CA00E01079 /* halo_013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_013.png; sourceTree = "<group>"; };
+		25D488E41ECC26CA00E01079 /* halo_014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_014.png; sourceTree = "<group>"; };
+		25D488E51ECC26CA00E01079 /* halo_015.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_015.png; sourceTree = "<group>"; };
+		25D488E61ECC26CA00E01079 /* halo_016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_016.png; sourceTree = "<group>"; };
+		25D488E71ECC26CA00E01079 /* halo_017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_017.png; sourceTree = "<group>"; };
+		25D488E81ECC26CA00E01079 /* halo_018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_018.png; sourceTree = "<group>"; };
+		25D488E91ECC26CA00E01079 /* halo_019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_019.png; sourceTree = "<group>"; };
+		25D488EA1ECC26CA00E01079 /* halo_020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_020.png; sourceTree = "<group>"; };
+		25D488EB1ECC26CA00E01079 /* halo_021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_021.png; sourceTree = "<group>"; };
+		25D488EC1ECC26CA00E01079 /* halo_022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_022.png; sourceTree = "<group>"; };
+		25D488ED1ECC26CA00E01079 /* halo_023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_023.png; sourceTree = "<group>"; };
+		25D488EE1ECC26CA00E01079 /* halo_024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_024.png; sourceTree = "<group>"; };
+		25D488EF1ECC26CA00E01079 /* halo_025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_025.png; sourceTree = "<group>"; };
+		25D488F01ECC26CA00E01079 /* halo_026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_026.png; sourceTree = "<group>"; };
+		25D488F11ECC26CA00E01079 /* halo_027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_027.png; sourceTree = "<group>"; };
+		25D488F21ECC26CA00E01079 /* halo_028.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_028.png; sourceTree = "<group>"; };
+		25D488F31ECC26CA00E01079 /* halo_029.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_029.png; sourceTree = "<group>"; };
+		25D488F41ECC26CA00E01079 /* halo_030.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_030.png; sourceTree = "<group>"; };
+		25D488F51ECC26CA00E01079 /* halo_031.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_031.png; sourceTree = "<group>"; };
+		25D488F61ECC26CA00E01079 /* halo_032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_032.png; sourceTree = "<group>"; };
+		25D488F71ECC26CA00E01079 /* halo_033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_033.png; sourceTree = "<group>"; };
+		25D488F81ECC26CA00E01079 /* halo_034.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_034.png; sourceTree = "<group>"; };
+		25D488F91ECC26CA00E01079 /* halo_035.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_035.png; sourceTree = "<group>"; };
+		25D488FA1ECC26CA00E01079 /* halo_036.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_036.png; sourceTree = "<group>"; };
+		25D488FB1ECC26CA00E01079 /* halo_037.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_037.png; sourceTree = "<group>"; };
+		25D488FC1ECC26CA00E01079 /* halo_038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_038.png; sourceTree = "<group>"; };
+		25D488FD1ECC26CA00E01079 /* halo_039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_039.png; sourceTree = "<group>"; };
+		25D488FE1ECC26CA00E01079 /* halo_040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_040.png; sourceTree = "<group>"; };
 		25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCustomFilterViewController.m; sourceTree = "<group>"; };
 		25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCustomFilterViewController.h; sourceTree = "<group>"; };
 		25E020041EB884900037CD2D /* HZVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVideoViewController.h; sourceTree = "<group>"; };
@@ -75,6 +160,7 @@
 		2505A2501EB61CBA00BCC6AD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				25D488D51ECC26CA00E01079 /* halo */,
 				256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */,
 				256FFDB11EB4CECA0087FCE6 /* Info.plist */,
 				2505A24D1EB617C200BCC6AD /* dataList.plist */,
@@ -119,6 +205,7 @@
 		256FFD9F1EB4CECA0087FCE6 /* HZImageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				25A23EFD1ECBFD100083453C /* Category */,
 				251541D51ECA9B7D00676235 /* Filter */,
 				2505A24F1EB61CAB00BCC6AD /* Demo */,
 				2505A2501EB61CBA00BCC6AD /* Resource */,
@@ -139,6 +226,63 @@
 				256FFDA11EB4CECA0087FCE6 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25A23EFD1ECBFD100083453C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				25A23EFA1ECBFD070083453C /* UIImageView+Gif.h */,
+				25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		25D488D51ECC26CA00E01079 /* halo */ = {
+			isa = PBXGroup;
+			children = (
+				25D488D61ECC26CA00E01079 /* halo_000.png */,
+				25D488D71ECC26CA00E01079 /* halo_001.png */,
+				25D488D81ECC26CA00E01079 /* halo_002.png */,
+				25D488D91ECC26CA00E01079 /* halo_003.png */,
+				25D488DA1ECC26CA00E01079 /* halo_004.png */,
+				25D488DB1ECC26CA00E01079 /* halo_005.png */,
+				25D488DC1ECC26CA00E01079 /* halo_006.png */,
+				25D488DD1ECC26CA00E01079 /* halo_007.png */,
+				25D488DE1ECC26CA00E01079 /* halo_008.png */,
+				25D488DF1ECC26CA00E01079 /* halo_009.png */,
+				25D488E01ECC26CA00E01079 /* halo_010.png */,
+				25D488E11ECC26CA00E01079 /* halo_011.png */,
+				25D488E21ECC26CA00E01079 /* halo_012.png */,
+				25D488E31ECC26CA00E01079 /* halo_013.png */,
+				25D488E41ECC26CA00E01079 /* halo_014.png */,
+				25D488E51ECC26CA00E01079 /* halo_015.png */,
+				25D488E61ECC26CA00E01079 /* halo_016.png */,
+				25D488E71ECC26CA00E01079 /* halo_017.png */,
+				25D488E81ECC26CA00E01079 /* halo_018.png */,
+				25D488E91ECC26CA00E01079 /* halo_019.png */,
+				25D488EA1ECC26CA00E01079 /* halo_020.png */,
+				25D488EB1ECC26CA00E01079 /* halo_021.png */,
+				25D488EC1ECC26CA00E01079 /* halo_022.png */,
+				25D488ED1ECC26CA00E01079 /* halo_023.png */,
+				25D488EE1ECC26CA00E01079 /* halo_024.png */,
+				25D488EF1ECC26CA00E01079 /* halo_025.png */,
+				25D488F01ECC26CA00E01079 /* halo_026.png */,
+				25D488F11ECC26CA00E01079 /* halo_027.png */,
+				25D488F21ECC26CA00E01079 /* halo_028.png */,
+				25D488F31ECC26CA00E01079 /* halo_029.png */,
+				25D488F41ECC26CA00E01079 /* halo_030.png */,
+				25D488F51ECC26CA00E01079 /* halo_031.png */,
+				25D488F61ECC26CA00E01079 /* halo_032.png */,
+				25D488F71ECC26CA00E01079 /* halo_033.png */,
+				25D488F81ECC26CA00E01079 /* halo_034.png */,
+				25D488F91ECC26CA00E01079 /* halo_035.png */,
+				25D488FA1ECC26CA00E01079 /* halo_036.png */,
+				25D488FB1ECC26CA00E01079 /* halo_037.png */,
+				25D488FC1ECC26CA00E01079 /* halo_038.png */,
+				25D488FD1ECC26CA00E01079 /* halo_039.png */,
+				25D488FE1ECC26CA00E01079 /* halo_040.png */,
+			);
+			path = halo;
 			sourceTree = "<group>";
 		};
 		25E01FFE1EB822830037CD2D /* Filters */ = {
@@ -227,10 +371,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D4890C1ECC26CA00E01079 /* halo_013.png in Resources */,
+				25D489031ECC26CA00E01079 /* halo_004.png in Resources */,
 				256FFDB01EB4CECA0087FCE6 /* LaunchScreen.storyboard in Resources */,
+				25D489211ECC26CA00E01079 /* halo_034.png in Resources */,
+				25D489161ECC26CA00E01079 /* halo_023.png in Resources */,
+				25D489141ECC26CA00E01079 /* halo_021.png in Resources */,
 				256FFDAD1EB4CECA0087FCE6 /* Assets.xcassets in Resources */,
+				25D489131ECC26CA00E01079 /* halo_020.png in Resources */,
+				25D4891C1ECC26CA00E01079 /* halo_029.png in Resources */,
+				25D489271ECC26CA00E01079 /* halo_040.png in Resources */,
+				25D4890E1ECC26CA00E01079 /* halo_015.png in Resources */,
+				25D4891D1ECC26CA00E01079 /* halo_030.png in Resources */,
+				25D489201ECC26CA00E01079 /* halo_033.png in Resources */,
+				25D489251ECC26CA00E01079 /* halo_038.png in Resources */,
+				25D489071ECC26CA00E01079 /* halo_008.png in Resources */,
+				25D489181ECC26CA00E01079 /* halo_025.png in Resources */,
+				25D4890A1ECC26CA00E01079 /* halo_011.png in Resources */,
+				25D489151ECC26CA00E01079 /* halo_022.png in Resources */,
+				25D489231ECC26CA00E01079 /* halo_036.png in Resources */,
 				2505A24E1EB617C200BCC6AD /* dataList.plist in Resources */,
+				25D489081ECC26CA00E01079 /* halo_009.png in Resources */,
+				25D4890B1ECC26CA00E01079 /* halo_012.png in Resources */,
+				25D4891B1ECC26CA00E01079 /* halo_028.png in Resources */,
+				25D4891E1ECC26CA00E01079 /* halo_031.png in Resources */,
+				25D489001ECC26CA00E01079 /* halo_001.png in Resources */,
+				25D4890D1ECC26CA00E01079 /* halo_014.png in Resources */,
+				25D489121ECC26CA00E01079 /* halo_019.png in Resources */,
 				256FFDAB1EB4CECA0087FCE6 /* Main.storyboard in Resources */,
+				25D489021ECC26CA00E01079 /* halo_003.png in Resources */,
+				25D489091ECC26CA00E01079 /* halo_010.png in Resources */,
+				25D489191ECC26CA00E01079 /* halo_026.png in Resources */,
+				25D489011ECC26CA00E01079 /* halo_002.png in Resources */,
+				25D489241ECC26CA00E01079 /* halo_037.png in Resources */,
+				25D4891F1ECC26CA00E01079 /* halo_032.png in Resources */,
+				25D488FF1ECC26CA00E01079 /* halo_000.png in Resources */,
+				25D489261ECC26CA00E01079 /* halo_039.png in Resources */,
+				25D489061ECC26CA00E01079 /* halo_007.png in Resources */,
+				25D489111ECC26CA00E01079 /* halo_018.png in Resources */,
+				25D489101ECC26CA00E01079 /* halo_017.png in Resources */,
+				25D489221ECC26CA00E01079 /* halo_035.png in Resources */,
+				25D4891A1ECC26CA00E01079 /* halo_027.png in Resources */,
+				25D4890F1ECC26CA00E01079 /* halo_016.png in Resources */,
+				25D489041ECC26CA00E01079 /* halo_005.png in Resources */,
+				25D489051ECC26CA00E01079 /* halo_006.png in Resources */,
+				25D489171ECC26CA00E01079 /* halo_024.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +431,7 @@
 				256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */,
 				256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */,
 				25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */,
+				25A23EFC1ECBFD070083453C /* UIImageView+Gif.m in Sources */,
 				256FFDA21EB4CECA0087FCE6 /* main.m in Sources */,
 				2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */,
 				251541D81ECA9CDC00676235 /* HZChromaKeyFilter.m in Sources */,

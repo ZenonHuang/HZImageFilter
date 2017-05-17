@@ -8,6 +8,7 @@
 
 #import "HZDetectorViewController.h"
 #import <CoreImage/CoreImage.h>
+#import "UIImageView+Gif.h"
 
 @interface HZDetectorViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *oldImageView;
@@ -69,6 +70,35 @@
             faceView.layer.borderColor=[UIColor orangeColor].CGColor;
             
             [self.oldImageView addSubview:faceView];
+            
+            /** 加光环  **/
+            UIImageView *imageView=[UIImageView new];
+            
+            
+            CGFloat haloWidth= faceViewBounds.size.width;
+            CGFloat haloHeight= haloWidth * 159 / 351;
+            
+            CGFloat haloCenterX=faceViewBounds.origin.x+faceViewBounds.size.width/2;
+            
+            CGRect rect=CGRectMake(haloCenterX-haloWidth/2, faceViewBounds.origin.y-haloHeight, haloWidth, haloHeight);
+            imageView.frame=rect;
+            [self.oldImageView addSubview:imageView];
+            
+            
+            NSMutableArray *list=[NSMutableArray new];
+            for (int i=0; i<41; i++) {
+                if (i<10) {
+                    NSString *name=[NSString stringWithFormat:@"halo_00%d",i];
+                    UIImage  *image=  [UIImage imageNamed:name];
+                    [list addObject:image];
+                }else{
+                    NSString *name=[NSString stringWithFormat:@"halo_0%d",i];
+                    UIImage  *image=  [UIImage imageNamed:name];
+                    [list addObject:image];
+                }
+            }
+            
+            [imageView playGifAnim:[list copy]];
             
             // 判断是否有左眼位置
             if(faceFeature.hasLeftEyePosition){
