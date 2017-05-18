@@ -42,7 +42,7 @@
     CGSize ciImageSize=   [image extent].size;;
     //将image沿y轴对称
     CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, -1);
-    //将图片上移,为负数
+    //y轴负方向平移
     transform = CGAffineTransformTranslate(transform,0,-ciImageSize.height);
     
     for (CIFeature *f in faceArray){

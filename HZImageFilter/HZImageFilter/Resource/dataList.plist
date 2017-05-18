@@ -8,7 +8,7 @@
 		<key>imageName</key>
 		<string>collection_profile</string>
 		<key>title</key>
-		<string>CoreImageFilter</string>
+		<string>Filters</string>
 	</dict>
 	<dict>
 		<key>StoryBoardID</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Video</string>
+		<string>ChromaKeyVideo</string>
 		<key>vc</key>
 		<string>HZVideoViewController</string>
 	</dict>
@@ -29,6 +29,12 @@
 		<string>detectorVC</string>
 		<key>title</key>
 		<string>DetectorImage</string>
+	</dict>
+	<dict>
+		<key>vc</key>
+		<string>HZDetectorSampleViewController</string>
+		<key>title</key>
+		<string>DetectorVideo</string>
 	</dict>
 </array>
 </plist>

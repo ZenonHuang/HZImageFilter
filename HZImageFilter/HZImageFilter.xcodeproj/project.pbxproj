@@ -19,6 +19,7 @@
 		256FFDAD1EB4CECA0087FCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAC1EB4CECA0087FCE6 /* Assets.xcassets */; };
 		256FFDB01EB4CECA0087FCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256FFDAE1EB4CECA0087FCE6 /* LaunchScreen.storyboard */; };
 		25A23EFC1ECBFD070083453C /* UIImageView+Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */; };
+		25A4703F1ECC876D0044D92F /* HZDetectorSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A4703E1ECC876D0044D92F /* HZDetectorSampleViewController.m */; };
 		25D488FF1ECC26CA00E01079 /* halo_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D61ECC26CA00E01079 /* halo_000.png */; };
 		25D489001ECC26CA00E01079 /* halo_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D71ECC26CA00E01079 /* halo_001.png */; };
 		25D489011ECC26CA00E01079 /* halo_002.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488D81ECC26CA00E01079 /* halo_002.png */; };
@@ -60,6 +61,8 @@
 		25D489251ECC26CA00E01079 /* halo_038.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FC1ECC26CA00E01079 /* halo_038.png */; };
 		25D489261ECC26CA00E01079 /* halo_039.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FD1ECC26CA00E01079 /* halo_039.png */; };
 		25D489271ECC26CA00E01079 /* halo_040.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FE1ECC26CA00E01079 /* halo_040.png */; };
+		25D4892A1ECC3CE900E01079 /* HZDetectorVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */; };
+		25D4892D1ECC450200E01079 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D4892C1ECC450200E01079 /* UIImage+Extension.m */; };
 		25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */; };
 		25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E020051EB884A70037CD2D /* HZVideoViewController.m */; };
 /* End PBXBuildFile section */
@@ -86,6 +89,8 @@
 		256FFDB11EB4CECA0087FCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25A23EFA1ECBFD070083453C /* UIImageView+Gif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Gif.h"; sourceTree = "<group>"; };
 		25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Gif.m"; sourceTree = "<group>"; };
+		25A4703D1ECC875C0044D92F /* HZDetectorSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDetectorSampleViewController.h; sourceTree = "<group>"; };
+		25A4703E1ECC876D0044D92F /* HZDetectorSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZDetectorSampleViewController.m; sourceTree = "<group>"; };
 		25D488D61ECC26CA00E01079 /* halo_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_000.png; sourceTree = "<group>"; };
 		25D488D71ECC26CA00E01079 /* halo_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_001.png; sourceTree = "<group>"; };
 		25D488D81ECC26CA00E01079 /* halo_002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_002.png; sourceTree = "<group>"; };
@@ -127,6 +132,10 @@
 		25D488FC1ECC26CA00E01079 /* halo_038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_038.png; sourceTree = "<group>"; };
 		25D488FD1ECC26CA00E01079 /* halo_039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_039.png; sourceTree = "<group>"; };
 		25D488FE1ECC26CA00E01079 /* halo_040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_040.png; sourceTree = "<group>"; };
+		25D489281ECC3CDA00E01079 /* HZDetectorVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDetectorVideoViewController.h; sourceTree = "<group>"; };
+		25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZDetectorVideoViewController.m; sourceTree = "<group>"; };
+		25D4892B1ECC44F400E01079 /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		25D4892C1ECC450200E01079 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCustomFilterViewController.m; sourceTree = "<group>"; };
 		25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCustomFilterViewController.h; sourceTree = "<group>"; };
 		25E020041EB884900037CD2D /* HZVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVideoViewController.h; sourceTree = "<group>"; };
@@ -174,13 +183,16 @@
 				251541D61ECA9BB100676235 /* HZChromaKeyFilter.h */,
 				251541D71ECA9CDC00676235 /* HZChromaKeyFilter.m */,
 			);
-			name = Filter;
 			path = Filter;
 			sourceTree = "<group>";
 		};
 		2544B5781EBB13EB0036AA41 /* Detector */ = {
 			isa = PBXGroup;
 			children = (
+				25A4703D1ECC875C0044D92F /* HZDetectorSampleViewController.h */,
+				25A4703E1ECC876D0044D92F /* HZDetectorSampleViewController.m */,
+				25D489281ECC3CDA00E01079 /* HZDetectorVideoViewController.h */,
+				25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */,
 				2544B5791EBB13FC0036AA41 /* HZDetectorViewController.h */,
 				2544B57A1EBB140C0036AA41 /* HZDetectorViewController.m */,
 			);
@@ -232,10 +244,11 @@
 		25A23EFD1ECBFD100083453C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				25D4892B1ECC44F400E01079 /* UIImage+Extension.h */,
+				25D4892C1ECC450200E01079 /* UIImage+Extension.m */,
 				25A23EFA1ECBFD070083453C /* UIImageView+Gif.h */,
 				25A23EFB1ECBFD070083453C /* UIImageView+Gif.m */,
 			);
-			name = Category;
 			path = Category;
 			sourceTree = "<group>";
 		};
@@ -429,8 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2544B57B1EBB140C0036AA41 /* HZDetectorViewController.m in Sources */,
+				25A4703F1ECC876D0044D92F /* HZDetectorSampleViewController.m in Sources */,
 				25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */,
 				256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */,
+				25D4892D1ECC450200E01079 /* UIImage+Extension.m in Sources */,
+				25D4892A1ECC3CE900E01079 /* HZDetectorVideoViewController.m in Sources */,
 				256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */,
 				25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */,
 				25A23EFC1ECBFD070083453C /* UIImageView+Gif.m in Sources */,

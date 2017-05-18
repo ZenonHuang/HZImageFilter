@@ -32,12 +32,6 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     //    self.view.backgroundColor=[UIColor whiteColor];
-    
-    
-    
-    
-    
-    
     //    [self.view addSubview:self.glkView];
     self.view=self.glkView;
     
@@ -61,27 +55,10 @@
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     
-    
     /**  取图片渲染 **/
     // UIImage *image = imageFromSampleBuffer(sampleBuffer);
     CVPixelBufferRef pixelBuffer = (CVPixelBufferRef)CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *image = [CIImage imageWithCVPixelBuffer:pixelBuffer];
-    
-
-    
-    /**
- 
-     CGRect rect = [image extent];
-         rect.origin.y = 200;
-         rect.size.width  = ScreenWidth; //640;
-         rect.size.height  = ScreenHeight; //(640.0/480.0)*640;
-     CIFilter *filter =[CIFilter filterWithName:@"CISepiaTone"];
-     [filter setValue:image forKey:kCIInputImageKey];
-     [filter setValue:@0.8 forKey:kCIInputIntensityKey];
-     image = filter.outputImage;
-     **/
-    
-    
     
     /** 消色 **/
     CIImage *myImage = image;
@@ -138,25 +115,21 @@
                                       keysAndValues:kCIInputImageKey,myImage,kCIInputBackgroundImageKey,self.bgImage,nil] 
                            valueForKey:kCIOutputImageKey];
     
-    
+    [self.glkView bindDrawable];
     if( !(self.glContext == [EAGLContext currentContext])) {
         [EAGLContext setCurrentContext:self.glContext];
     }
+    // clear eagl view to grey
+    glClearColor(0.5, 0.5, 0.5, 1.0);  
+    glClear(GL_COLOR_BUFFER_BIT);
     
+    // set the blend mode to "source over" so that CI will use that
+    glEnable(GL_BLEND);  
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     [self.ciContext drawImage:resulImage
                        inRect:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2) 
                      fromRect:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2) ];
-    
-    
-    
-    //    glView.bindDrawable()
-    //    ciContext.drawImage(image, inRect:image.extent(), fromRect: image.extent())
-    //    glView.display()
-    
-    // 实时渲染
-    //    [self.pixellateFilter setValue:@(sender.value) forKey:@"inputRadius"];
-    //    [self.glkView.context presentRenderbuffer:GL_RENDERBUFFER];
-    
+    [self.glkView display];
 }
 
 #pragma mark - private

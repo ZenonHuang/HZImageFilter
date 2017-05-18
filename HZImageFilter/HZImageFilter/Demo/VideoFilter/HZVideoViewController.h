@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HZVideoViewController :  GLKViewController//UIViewController    
+@interface HZVideoViewController :  GLKViewController    
 
 @end

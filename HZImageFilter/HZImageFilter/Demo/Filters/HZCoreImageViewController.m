@@ -56,7 +56,7 @@
     }
     
     self.rightButton.selected=(!self.rightButton.selected);
-    
+
 }
 
 - (void)fliterEvent:(NSString *)filterName
@@ -177,7 +177,7 @@
         [_rightButton setTitle:@"Filter" 
                       forState:UIControlStateNormal];
         
-        [self.rightButton setTitle:@"hide" 
+        [_rightButton setTitle:@"hide" 
                           forState:UIControlStateSelected];
         
         [_rightButton sizeToFit];
