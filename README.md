@@ -3,7 +3,7 @@ iOS 原生图片滤镜使用,并根据苹果文档尝试了抠图，拼图。最
 ## 效果图：
 ### 人脸检测
 
-![detecotr](http://7xiym9.com1.z0.glb.clouddn.com/HZImageFilter_Detector.png?imageView2/4/w/300)
+![detecotr](http://7xiym9.com1.z0.glb.clouddn.com/detectorVideo.gif?imageView2/4/w/300)
 
 
 
