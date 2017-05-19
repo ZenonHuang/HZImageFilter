@@ -148,11 +148,8 @@
         
         return image;
     }
-    
-    
-    // 需要执行的任务
-    //得到图片的尺寸，不能再使用 [image extent].size ，这里是按摄像头分辨率，拿到的是1080P
-    CGSize ciImageSize=CGSizeMake(2*kScreenWidth, 2*kScreenHeight);   
+    //得到图片的尺寸
+    CGSize ciImageSize=[image extent].size;  
     CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, -1);
     transform = CGAffineTransformTranslate(transform,0,-ciImageSize.height);
     for (CIFeature *f in faceArray){
@@ -211,7 +208,7 @@
     
     [self.ciContext drawImage:image
                        inRect:CGRectMake(0, 0, kScreenWidth*2, kScreenHeight*2) 
-                     fromRect:CGRectMake(0, 0, kScreenWidth*2, kScreenHeight*2) ];
+                     fromRect:CGRectMake(0, 0, [image extent].size.width,[image extent].size.height) ];
     
     [self.glkView display];
 }
@@ -265,9 +262,7 @@
         
         _session = [[AVCaptureSession alloc] init];
         [_session beginConfiguration];
-        //尺寸  todo :自适应尺寸,否则强制宏判断机型
-        //AVCaptureSessionPresetiFrame1280x720  AVCaptureSessionPreset1280x720
-        [_session setSessionPreset: AVCaptureSessionPreset1920x1080];
+          [self.session setSessionPreset: AVCaptureSessionPresetHigh];
     }
     return _session;
 }
@@ -295,7 +290,7 @@
         }
     }
     self.isDevicePositionFront = YES;
-    [self.session setSessionPreset: AVCaptureSessionPreset1280x720];
+ 
     return _frontCameraInput;
 }
 

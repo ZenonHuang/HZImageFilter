@@ -120,7 +120,7 @@
         [EAGLContext setCurrentContext:self.glContext];
     }
     // clear eagl view to grey
-    glClearColor(0.5, 0.5, 0.5, 1.0);  
+    glClearColor(0.5, 0.5, 0.5, 1.0); 
     glClear(GL_COLOR_BUFFER_BIT);
     
     // set the blend mode to "source over" so that CI will use that
@@ -128,7 +128,7 @@
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     [self.ciContext drawImage:resulImage
                        inRect:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2) 
-                     fromRect:CGRectMake(0, 0, ScreenWidth*2, ScreenHeight*2) ];
+                     fromRect:CGRectMake(0, 0, [image extent].size.width,[image extent].size.height) ];
     [self.glkView display];
 }
 
