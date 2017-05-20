@@ -12,7 +12,11 @@
 //协议
 @protocol DetectorVideoDelegate<NSObject>
 //协议的方法
--(void)detectorVideoLocateFace:(CGRect )faceBounds;
+-(void)detectorVideoLocateFace:(CGRect)faceBounds;
+
+-(void)detectorVideoLocateLeftEyeForFace:(CGRect)leftEyeBounds;
+
+-(void)detectorVideoLocateRightEyeForFace:(CGRect)rightEyeBounds;
 @end
 
 @interface HZDetectorVideoViewController :  GLKViewController    

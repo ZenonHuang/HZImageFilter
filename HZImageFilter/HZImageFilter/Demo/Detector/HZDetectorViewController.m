@@ -112,7 +112,7 @@
                 leftEyeBounds.origin.y += offsetY;
                 
                 UIView *leftEyeView = [[UIView alloc] initWithFrame:leftEyeBounds];
-               leftEyeView .backgroundColor = [UIColor orangeColor];
+                leftEyeView .backgroundColor = [UIColor orangeColor];
                 [self.oldImageView addSubview:leftEyeView ];
                 
             }

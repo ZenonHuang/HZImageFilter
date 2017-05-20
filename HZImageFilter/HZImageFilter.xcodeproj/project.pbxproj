@@ -189,12 +189,8 @@
 		2544B5781EBB13EB0036AA41 /* Detector */ = {
 			isa = PBXGroup;
 			children = (
-				25A4703D1ECC875C0044D92F /* HZDetectorSampleViewController.h */,
-				25A4703E1ECC876D0044D92F /* HZDetectorSampleViewController.m */,
-				25D489281ECC3CDA00E01079 /* HZDetectorVideoViewController.h */,
-				25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */,
-				2544B5791EBB13FC0036AA41 /* HZDetectorViewController.h */,
-				2544B57A1EBB140C0036AA41 /* HZDetectorViewController.m */,
+				2597F27A1ED08C4600CDC2CE /* Image */,
+				2597F2791ED08C3E00CDC2CE /* Video */,
 			);
 			path = Detector;
 			sourceTree = "<group>";
@@ -239,6 +235,26 @@
 				256FFDA11EB4CECA0087FCE6 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2597F2791ED08C3E00CDC2CE /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				25A4703D1ECC875C0044D92F /* HZDetectorSampleViewController.h */,
+				25A4703E1ECC876D0044D92F /* HZDetectorSampleViewController.m */,
+				25D489281ECC3CDA00E01079 /* HZDetectorVideoViewController.h */,
+				25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		2597F27A1ED08C4600CDC2CE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2544B5791EBB13FC0036AA41 /* HZDetectorViewController.h */,
+				2544B57A1EBB140C0036AA41 /* HZDetectorViewController.m */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		25A23EFD1ECBFD100083453C /* Category */ = {

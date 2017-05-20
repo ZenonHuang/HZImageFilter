@@ -12,12 +12,18 @@
 
 @interface HZDetectorSampleViewController ()<DetectorVideoDelegate>
 @property (nonatomic,readwrite,strong) HZDetectorVideoViewController *detectorVC;
-@property (nonatomic,readwrite,strong) UIView *faceView;
-
-@property (nonatomic,readwrite,strong) UIImageView *haloImgView;
-@property (nonatomic,readwrite,strong) NSArray     *haloImgList;
 @end
 
+//贴纸
+@interface HZDetectorSampleViewController ()
+@property (nonatomic,readwrite,strong) UIView      *faceView;
+@property (nonatomic,readwrite,strong) UIImageView *haloImgView;
+@property (nonatomic,readwrite,strong) NSArray     *haloImgList;
+@property (nonatomic,readwrite,strong) UIImageView *leftEyeImgView;
+@property (nonatomic,readwrite,strong) UIImageView *rightEyeImgView;
+@end
+
+//导航按钮
 @interface HZDetectorSampleViewController ()
 @property (nonatomic,readwrite,strong) UIButton         *rightButton;
 @property (nonatomic,readwrite,strong) UIBarButtonItem  *rightBarButtonItem;
@@ -37,6 +43,9 @@
     [self.view addSubview:self.faceView];
     [self.view addSubview:self.haloImgView];
     [self.haloImgView playGifAnim:self.haloImgList];
+    
+    [self.view addSubview:self.leftEyeImgView];
+    [self.view addSubview:self.rightEyeImgView];
 }
 
 #pragma mark - action
@@ -53,14 +62,13 @@
 #pragma mark - delegate
 -(void)detectorVideoLocateFace:(CGRect)faceBounds{
     if (CGRectEqualToRect(faceBounds, CGRectZero)   ) {
-//         [self.haloImgView stopGifAnim];
-        self.faceView.hidden=self.haloImgView.hidden=YES;
+         self.leftEyeImgView.hidden=self.rightEyeImgView.hidden=self.faceView.hidden=self.haloImgView.hidden=YES;
          
     }else{
             
           self.faceView.hidden=self.haloImgView.hidden=NO;
-        
           self.faceView.frame=faceBounds;
+        
         {
         CGFloat haloWidth= faceBounds.size.width;
         CGFloat haloHeight= haloWidth * 159 / 351;
@@ -69,9 +77,28 @@
         
         CGRect rect=CGRectMake(haloCenterX-haloWidth/2, faceBounds.origin.y-haloHeight, haloWidth, haloHeight);
         self.haloImgView.frame=rect;
-            
-//            [self.haloImgView playGifAnim:self.haloImgList];
         }
+        
+    }
+}
+
+-(void)detectorVideoLocateLeftEyeForFace:(CGRect)leftEyeBounds{
+    if (CGRectEqualToRect(leftEyeBounds, CGRectZero)   ) {
+         self.leftEyeImgView.hidden=YES;
+        
+    }else{
+         self.leftEyeImgView.hidden=NO;
+         self.leftEyeImgView.frame=leftEyeBounds;
+    }
+}
+
+-(void)detectorVideoLocateRightEyeForFace:(CGRect)rightEyeBounds{
+    if (CGRectEqualToRect(rightEyeBounds, CGRectZero)   ) {
+        self.rightEyeImgView.hidden=YES;
+        
+    }else{
+        self.rightEyeImgView.hidden=NO;
+        self.rightEyeImgView.frame=rightEyeBounds;
     }
 }
 
@@ -115,7 +142,8 @@
 -(UIView *)faceView{
     if (!_faceView) {
         _faceView=[UIView new];
-        _faceView.backgroundColor=[UIColor orangeColor];
+//        _faceView.layer.borderColor=[UIColor orangeColor].CGColor;
+//        _faceView.layer.borderWidth=2;
     }
     return _faceView;
 }
@@ -145,6 +173,21 @@
         _haloImgList= [list copy];
     }
     return _haloImgList;
+}
+
+-(UIImageView *)leftEyeImgView{
+    if (!_leftEyeImgView) {
+        _leftEyeImgView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leftHeart"]];
+        
+    }
+    return _leftEyeImgView;
+}
+
+-(UIImageView *)rightEyeImgView{
+    if (!_rightEyeImgView) {
+        _rightEyeImgView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rightHeart"]];
+    }
+    return _rightEyeImgView;
 }
 
 @end

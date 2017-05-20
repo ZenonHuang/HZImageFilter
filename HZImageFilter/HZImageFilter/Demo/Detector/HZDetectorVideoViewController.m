@@ -178,6 +178,55 @@
             if ([self.detectorDelegate respondsToSelector:@selector(detectorVideoLocateFace:)]) {
                 [self.detectorDelegate detectorVideoLocateFace:faceViewBounds];
             }
+        
+        // 判断是否有右眼位置
+        if(faceFeature.hasRightEyePosition){
+            CGFloat x=faceFeature.rightEyePosition.x;
+            CGFloat y=faceFeature.rightEyePosition.y;
+            
+            
+            CGSize size=CGSizeMake(faceViewBounds.size.width/3, faceViewBounds.size.width/3);
+            CGRect rightEyeRect=CGRectMake(x-size.width/2,y-size.height/2, size.width, size.height);
+            
+            //获取人脸的frame
+            CGRect rightEyeBounds = CGRectApplyAffineTransform(rightEyeRect, transform);
+            rightEyeBounds=CGRectApplyAffineTransform(rightEyeBounds,scaleTransform);
+            rightEyeBounds.origin.x += offsetX;
+            rightEyeBounds.origin.y += offsetY;
+            
+            if ([self.detectorDelegate respondsToSelector:@selector(detectorVideoLocateRightEyeForFace:)]) {
+                [self.detectorDelegate detectorVideoLocateRightEyeForFace:rightEyeBounds];
+            }
+            
+        }else{
+            if ([self.detectorDelegate respondsToSelector:@selector(detectorVideoLocateRightEyeForFace:)]) {
+                [self.detectorDelegate detectorVideoLocateRightEyeForFace:CGRectZero];
+            }
+        }
+
+        // 判断是否有左眼位置
+        if(faceFeature.hasLeftEyePosition){
+            
+            CGFloat x=faceFeature.leftEyePosition.x;
+            CGFloat y=faceFeature.leftEyePosition.y;
+             CGSize size=CGSizeMake(faceViewBounds.size.width/3, faceViewBounds.size.width/3);
+            CGRect leftEyeRect=CGRectMake(x-size.width/2,y-size.height/2, size.width, size.height);
+            
+            //获取人脸的frame
+            CGRect leftEyeBounds = CGRectApplyAffineTransform(leftEyeRect, transform);
+            leftEyeBounds=CGRectApplyAffineTransform(leftEyeBounds,scaleTransform);
+            leftEyeBounds.origin.x += offsetX;
+            leftEyeBounds.origin.y += offsetY;
+            
+            if ([self.detectorDelegate respondsToSelector:@selector(detectorVideoLocateLeftEyeForFace:)]) {
+                [self.detectorDelegate detectorVideoLocateLeftEyeForFace:leftEyeBounds];
+            }
+            
+        }else{
+            if ([self.detectorDelegate respondsToSelector:@selector(detectorVideoLocateLeftEyeForFace:)]) {
+                [self.detectorDelegate detectorVideoLocateLeftEyeForFace:CGRectZero];
+            }
+        }
             
     }
     
@@ -290,7 +339,7 @@
         _dataOutput = [[AVCaptureVideoDataOutput alloc] init];
         
         [_dataOutput setAlwaysDiscardsLateVideoFrames:YES]; 
-        //          conn.videoMaxFrameDuration = CMTimeMake(1,rate);
+        //conn.videoMaxFrameDuration = CMTimeMake(1,rate);
         
         [_dataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] 
                                                                   forKey:(id)kCVPixelBufferPixelFormatTypeKey]]; 
