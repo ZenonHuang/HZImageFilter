@@ -41,6 +41,8 @@
     [super viewDidLoad];
     
     self.view=self.glkView;    
+    
+    [self.session beginConfiguration];
     [self.session addInput:self.backCameraInput];
     self.isDevicePositionFront=NO;
     
@@ -153,9 +155,6 @@
     CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, -1);
     transform = CGAffineTransformTranslate(transform,0,-ciImageSize.height);
     for (CIFeature *f in faceArray){
-        
-        if ([f.type isEqualToString:CIFeatureTypeFace]) {
-            
             CIFaceFeature *faceFeature=(CIFaceFeature *)f;
             // 实现坐标转换
             CGSize viewSize =self.view.bounds.size;          
@@ -180,13 +179,6 @@
                 [self.detectorDelegate detectorVideoLocateFace:faceViewBounds];
             }
             
-            
-        }else{
-            if ([self.detectorDelegate respondsToSelector:@selector(detectorVideoLocateFace:)]) {
-                [self.detectorDelegate detectorVideoLocateFace:CGRectZero];
-            }
-            
-        }
     }
     
     return image;
@@ -259,10 +251,8 @@
 
 -(AVCaptureSession *)session{
     if (!_session) {
-        
         _session = [[AVCaptureSession alloc] init];
-        [_session beginConfiguration];
-          [self.session setSessionPreset: AVCaptureSessionPresetHigh];
+        [_session setSessionPreset: AVCaptureSessionPresetHigh];
     }
     return _session;
 }
@@ -302,7 +292,7 @@
         [_dataOutput setAlwaysDiscardsLateVideoFrames:YES]; 
         //          conn.videoMaxFrameDuration = CMTimeMake(1,rate);
         
-        [_dataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange]//kCVPixelFormatType_32BGRA] 
+        [_dataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] 
                                                                   forKey:(id)kCVPixelBufferPixelFormatTypeKey]]; 
     }
     return _dataOutput;

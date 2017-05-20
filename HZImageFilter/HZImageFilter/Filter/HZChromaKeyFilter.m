@@ -42,6 +42,8 @@
     CIImage *myImage = [[CIImage alloc] initWithImage:self.inputFilterImage];
     [colorCubeFilter setValue:myImage forKey:@"inputImage"];
     
+   
+    
     float rgb[3], hsv[3], *c = cubeData;
     // Populate cube with a simple gradient going from 0 to 1
     for (int z = 0; z < size; z++){
