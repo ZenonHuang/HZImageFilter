@@ -1,18 +1,16 @@
 //
-//  HZCustomFilterViewController.m
+//  HZFilterChainViewController .m
 //  HZImageFilter
 //
 //  Created by zz go on 2017/5/2.
 //  Copyright © 2017年 zzgo. All rights reserved.
 //
 
-#import "HZCustomFilterViewController.h"
-//#import <CoreImage/CoreImage.h>
-//#import "Tool.h"
+#import "HZFilterChainViewController.h"
 #import "HZChromaKeyFilter.h"
-//#import <OpenGLES/EAGL.h>
 
-@interface HZCustomFilterViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+
+@interface HZFilterChainViewController  ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *greenImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *resultBgImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *resultImageView;
@@ -22,7 +20,7 @@
 @end
 
 
-@implementation HZCustomFilterViewController
+@implementation HZFilterChainViewController 
 
 -(void)viewDidLoad{
     [super viewDidLoad];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HZCustomFilterViewController : UIViewController
+@interface HZFilterChainViewController : UIViewController
 
 @end

@@ -12,17 +12,11 @@
 	</dict>
 	<dict>
 		<key>StoryBoardID</key>
-		<string>CustomFilterVC</string>
+		<string>FilterChainVC</string>
 		<key>vc</key>
-		<string>HZCustomFilterViewController</string>
+		<string>HZFilterChainViewController</string>
 		<key>title</key>
-		<string>CustomFilter</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>ChromaKeyVideo</string>
-		<key>vc</key>
-		<string>HZVideoViewController</string>
+		<string>FilterChain</string>
 	</dict>
 	<dict>
 		<key>StoryBoardID</key>

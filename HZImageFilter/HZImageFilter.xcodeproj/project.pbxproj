@@ -63,8 +63,7 @@
 		25D489271ECC26CA00E01079 /* halo_040.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D488FE1ECC26CA00E01079 /* halo_040.png */; };
 		25D4892A1ECC3CE900E01079 /* HZDetectorVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */; };
 		25D4892D1ECC450200E01079 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D4892C1ECC450200E01079 /* UIImage+Extension.m */; };
-		25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */; };
-		25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E020051EB884A70037CD2D /* HZVideoViewController.m */; };
+		25E01FFC1EB81EB90037CD2D /* HZFilterChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E01FFB1EB81EB90037CD2D /* HZFilterChainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,10 +135,8 @@
 		25D489291ECC3CE900E01079 /* HZDetectorVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZDetectorVideoViewController.m; sourceTree = "<group>"; };
 		25D4892B1ECC44F400E01079 /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		25D4892C1ECC450200E01079 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCustomFilterViewController.m; sourceTree = "<group>"; };
-		25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCustomFilterViewController.h; sourceTree = "<group>"; };
-		25E020041EB884900037CD2D /* HZVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVideoViewController.h; sourceTree = "<group>"; };
-		25E020051EB884A70037CD2D /* HZVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZVideoViewController.m; sourceTree = "<group>"; };
+		25E01FFB1EB81EB90037CD2D /* HZFilterChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFilterChainViewController.m; sourceTree = "<group>"; };
+		25E01FFD1EB81ECA0037CD2D /* HZFilterChainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZFilterChainViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,10 +153,9 @@
 		2505A24F1EB61CAB00BCC6AD /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				25E01FFF1EB822940037CD2D /* Custom */,
-				2544B5781EBB13EB0036AA41 /* Detector */,
-				25E01FFE1EB822830037CD2D /* Filters */,
-				25E020031EB884430037CD2D /* VideoFilter */,
+				25E01FFF1EB822940037CD2D /* FilterChain(滤镜链) */,
+				2544B5781EBB13EB0036AA41 /* Detector(识别) */,
+				25E01FFE1EB822830037CD2D /* Filters(单滤镜) */,
 				251515591EB98716008321A3 /* Tool.h */,
 				2515155A1EB98748008321A3 /* Tool.m */,
 			);
@@ -186,12 +182,13 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
-		2544B5781EBB13EB0036AA41 /* Detector */ = {
+		2544B5781EBB13EB0036AA41 /* Detector(识别) */ = {
 			isa = PBXGroup;
 			children = (
 				2597F27A1ED08C4600CDC2CE /* Image */,
 				2597F2791ED08C3E00CDC2CE /* Video */,
 			);
+			name = "Detector(识别)";
 			path = Detector;
 			sourceTree = "<group>";
 		};
@@ -316,31 +313,24 @@
 			path = halo;
 			sourceTree = "<group>";
 		};
-		25E01FFE1EB822830037CD2D /* Filters */ = {
+		25E01FFE1EB822830037CD2D /* Filters(单滤镜) */ = {
 			isa = PBXGroup;
 			children = (
 				2505A2531EB61D0D00BCC6AD /* HZCoreImageViewController.h */,
 				2505A2511EB61CFD00BCC6AD /* HZCoreImageViewController.m */,
 			);
+			name = "Filters(单滤镜)";
 			path = Filters;
 			sourceTree = "<group>";
 		};
-		25E01FFF1EB822940037CD2D /* Custom */ = {
+		25E01FFF1EB822940037CD2D /* FilterChain(滤镜链) */ = {
 			isa = PBXGroup;
 			children = (
-				25E01FFD1EB81ECA0037CD2D /* HZCustomFilterViewController.h */,
-				25E01FFB1EB81EB90037CD2D /* HZCustomFilterViewController.m */,
+				25E01FFD1EB81ECA0037CD2D /* HZFilterChainViewController.h */,
+				25E01FFB1EB81EB90037CD2D /* HZFilterChainViewController.m */,
 			);
+			name = "FilterChain(滤镜链)";
 			path = Custom;
-			sourceTree = "<group>";
-		};
-		25E020031EB884430037CD2D /* VideoFilter */ = {
-			isa = PBXGroup;
-			children = (
-				25E020041EB884900037CD2D /* HZVideoViewController.h */,
-				25E020051EB884A70037CD2D /* HZVideoViewController.m */,
-			);
-			path = VideoFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,12 +449,11 @@
 			files = (
 				2544B57B1EBB140C0036AA41 /* HZDetectorViewController.m in Sources */,
 				25A4703F1ECC876D0044D92F /* HZDetectorSampleViewController.m in Sources */,
-				25E020061EB884A70037CD2D /* HZVideoViewController.m in Sources */,
 				256FFDA81EB4CECA0087FCE6 /* ViewController.m in Sources */,
 				25D4892D1ECC450200E01079 /* UIImage+Extension.m in Sources */,
 				25D4892A1ECC3CE900E01079 /* HZDetectorVideoViewController.m in Sources */,
 				256FFDA51EB4CECA0087FCE6 /* AppDelegate.m in Sources */,
-				25E01FFC1EB81EB90037CD2D /* HZCustomFilterViewController.m in Sources */,
+				25E01FFC1EB81EB90037CD2D /* HZFilterChainViewController.m in Sources */,
 				25A23EFC1ECBFD070083453C /* UIImageView+Gif.m in Sources */,
 				256FFDA21EB4CECA0087FCE6 /* main.m in Sources */,
 				2505A2521EB61CFD00BCC6AD /* HZCoreImageViewController.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="40u-7T-Kch">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="40u-7T-Kch">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="1065" y="12"/>
         </scene>
-        <!--Custom Filter View Controller-->
+        <!--Filter Chain View Controller-->
         <scene sceneID="GZn-ci-iZu">
             <objects>
-                <viewController storyboardIdentifier="CustomFilterVC" id="3bU-DJ-BpD" customClass="HZCustomFilterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterChainVC" id="3bU-DJ-BpD" customClass="HZFilterChainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bDz-ZO-R1U"/>
                         <viewControllerLayoutGuide type="bottom" id="AZZ-Mg-hJw"/>
@@ -66,7 +66,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="tapResultButton:" destination="3bU-DJ-BpD" eventType="touchUpInside" id="3dP-xh-mNI"/>
+                                            <action selector="tapResultButton:" destination="3bU-DJ-BpD" eventType="touchUpInside" id="8Tf-sk-kbs"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-oA-l45">
@@ -113,9 +113,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenImageView" destination="DVn-Mr-kxc" id="hf0-Q8-lDU"/>
-                        <outlet property="resultBgImageView" destination="fPQ-Zx-ITd" id="boO-w1-unp"/>
-                        <outlet property="resultImageView" destination="H4a-oA-l45" id="2ad-Cu-DmV"/>
+                        <outlet property="greenImageView" destination="DVn-Mr-kxc" id="RUI-II-gQN"/>
+                        <outlet property="resultBgImageView" destination="fPQ-Zx-ITd" id="qxd-mR-FQM"/>
+                        <outlet property="resultImageView" destination="H4a-oA-l45" id="OO9-rN-bIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYH-d5-Z1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
